@@ -1,0 +1,7 @@
+C:\POS\POS Plug-ins\Services\Discount\bin\Debug\Discount.dll
+C:\POS\POS Plug-ins\Services\Discount\bin\Debug\Discount.pdb
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Discount.dll
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Discount.pdb
+C:\POS\POS Plug-ins\Services\Discount\obj\Debug\Discount.csprojResolveAssemblyReference.cache
+C:\POS\POS Plug-ins\Services\Discount\obj\Debug\Discount.dll
+C:\POS\POS Plug-ins\Services\Discount\obj\Debug\Discount.pdb
