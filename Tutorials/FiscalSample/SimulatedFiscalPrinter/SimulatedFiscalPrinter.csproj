@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{99D94B6B-307C-4B67-B6EA-6DD8D56F23A3}</ProjectGuid><SDKPath>..\..\..</SDKPath>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SimulatedFiscalPrinter</RootNamespace>
+    <AssemblyName>SimulatedFiscalPrinter</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>FiscalFrameworkSample.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' "><OutputPath>bin\Debug\</OutputPath></PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' "><OutputPath>bin\Release\</OutputPath></PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    
+    <Compile Include="LineItem.cs" />
+    <Compile Include="MyFiscalPrinter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimulatedFiscalPrinterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SimulatedFiscalPrinterForm.Designer.cs">
+      <DependentUpon>SimulatedFiscalPrinterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaxInfo.cs" />
+    <Compile Include="ZReport.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FiscalPrinterInterfaces\FiscalPrinterInterfaces.csproj">
+      <Project>{87444835-A536-42DC-A73C-EAEE7E74122A}</Project>
+      <Name>FiscalPrinterInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FiscalFrameworkSample.snk" />
+    
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SimulatedFiscalPrinterForm.resx">
+      <DependentUpon>SimulatedFiscalPrinterForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

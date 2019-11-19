@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3B38D41A-467E-40ED-BF0B-6A41FE92E91E}</ProjectGuid><SDKPath>..\..\..</SDKPath>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BlankOperations</RootNamespace>
+    <AssemblyName>BlankOperations</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>FiscalFrameworkSample.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' "><OutputPath>bin\Debug\</OutputPath></PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' "><OutputPath>bin\Release\</OutputPath></PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.Dynamics.Retail.Pos.Contracts"><HintPath>$(SDKPath)\Microsoft.Dynamics.Retail.Pos.Contracts.dll</HintPath><Private>False</Private><EmbedInteropTypes>True</EmbedInteropTypes></Reference>
+    <Reference Include="SystemSettings"><HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\SystemSettings.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="Transaction"><HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\Transaction.dll</HintPath><Private>False</Private></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlankOperations.cs" />
+    <Compile Include="GeneralFiscalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralFiscalForm.Designer.cs">
+      <DependentUpon>GeneralFiscalForm.cs</DependentUpon>
+    </Compile>
+    
+    <Compile Include="ItemPriceListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemPriceListForm.Designer.cs">
+      <DependentUpon>ItemPriceListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FiscalFrameworkSample.snk" />
+    
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FiscalCore\FiscalCore.csproj">
+      <Project>{B39E133E-0BE9-4579-8B54-4FADB8B90377}</Project>
+      <Name>FiscalCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FiscalPrinterInterfaces\FiscalPrinterInterfaces.csproj">
+      <Project>{87444835-A536-42DC-A73C-EAEE7E74122A}</Project>
+      <Name>FiscalPrinterInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GeneralFiscalForm.resx">
+      <DependentUpon>GeneralFiscalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemPriceListForm.resx">
+      <DependentUpon>ItemPriceListForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
