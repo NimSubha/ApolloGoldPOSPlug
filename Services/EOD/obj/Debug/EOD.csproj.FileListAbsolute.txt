@@ -1,0 +1,12 @@
+C:\POS\POS Plug-ins\Services\EOD\bin\Debug\EOD.dll
+C:\POS\POS Plug-ins\Services\EOD\bin\Debug\EOD.pdb
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\EOD.dll
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\EOD.pdb
+C:\POS\POS Plug-ins\Services\EOD\obj\Debug\Microsoft.Dynamics.Retail.Pos.EOD.BlindClosedShiftsForm.resources
+C:\POS\POS Plug-ins\Services\EOD\obj\Debug\Microsoft.Dynamics.Retail.Pos.EOD.CashDrawerSelectionForm.resources
+C:\POS\POS Plug-ins\Services\EOD\obj\Debug\Microsoft.Dynamics.Retail.Pos.EOD.ResumeShiftForm.resources
+C:\POS\POS Plug-ins\Services\EOD\obj\Debug\Microsoft.Dynamics.Retail.Pos.EOD.ShiftActionForm.resources
+C:\POS\POS Plug-ins\Services\EOD\obj\Debug\EOD.csproj.GenerateResource.Cache
+C:\POS\POS Plug-ins\Services\EOD\obj\Debug\EOD.dll.licenses
+C:\POS\POS Plug-ins\Services\EOD\obj\Debug\EOD.dll
+C:\POS\POS Plug-ins\Services\EOD\obj\Debug\EOD.pdb

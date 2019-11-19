@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7BAFF941-604A-439A-9933-5E1B92B1A53C}</ProjectGuid>
+    <SDKPath>..\..</SDKPath>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.Dynamics.Retail.Pos.EOD</RootNamespace>
+    <AssemblyName>EOD</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\..\Program Files %28x86%29\Microsoft Dynamics AX\60\Retail POS\Services\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v11.2">
+      <HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\DevExpress.Data.v11.2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v11.2">
+      <HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\DevExpress.Utils.v11.2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.2">
+      <HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\DevExpress.XtraEditors.v11.2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v11.2">
+      <HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\DevExpress.XtraGrid.v11.2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BatchCalculation.cs" />
+    <Compile Include="EOD.cs" />
+    <Compile Include="BatchPrinting.cs" />
+    <Compile Include="Forms\BlindClosedShiftsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BlindClosedShiftsForm.designer.cs">
+      <DependentUpon>BlindClosedShiftsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CashDrawerSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CashDrawerSelectionForm.designer.cs">
+      <DependentUpon>CashDrawerSelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ResumeShiftForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ResumeShiftForm.designer.cs">
+      <DependentUpon>ResumeShiftForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ShiftActionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ShiftActionForm.designer.cs">
+      <DependentUpon>ShiftActionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShiftUsersCache.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Diagnostics">
+      <HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\Microsoft.Dynamics.Retail.Diagnostics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.Retail.Pos.Contracts">
+      <HintPath>$(SDKPath)\Microsoft.Dynamics.Retail.Pos.Contracts.dll</HintPath>
+      <Private>False</Private>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="DataAccess">
+      <HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\DataAccess.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.Retail.Pos.DataEntity">
+      <HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\Microsoft.Dynamics.Retail.Pos.DataEntity.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POSControls">
+      <HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\POSControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POSProcesses">
+      <HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\POSProcesses.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SystemSettings">
+      <HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\SystemSettings.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Transaction">
+      <HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\Transaction.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\BlindClosedShiftsForm.resx">
+      <DependentUpon>BlindClosedShiftsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CashDrawerSelectionForm.resx">
+      <DependentUpon>CashDrawerSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ResumeShiftForm.resx">
+      <DependentUpon>ResumeShiftForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ShiftActionForm.resx">
+      <DependentUpon>ShiftActionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
