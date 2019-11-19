@@ -1,0 +1,14 @@
+C:\POS\POS Plug-ins\Services\PurchaseOrderReceiving\bin\Debug\PurchaseOrderReceiving.dll
+C:\POS\POS Plug-ins\Services\PurchaseOrderReceiving\bin\Debug\PurchaseOrderReceiving.pdb
+C:\POS\POS Plug-ins\Services\PurchaseOrderReceiving\bin\Debug\Application.dll
+C:\POS\POS Plug-ins\Services\PurchaseOrderReceiving\bin\Debug\Application.pdb
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\PurchaseOrderReceiving.dll
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\PurchaseOrderReceiving.pdb
+C:\POS\POS Plug-ins\Services\PurchaseOrderReceiving\obj\Debug\Microsoft.Dynamics.Retail.Pos.PurchaseOrderReceiving.frmPurchaseOrderReceiving.resources
+C:\POS\POS Plug-ins\Services\PurchaseOrderReceiving\obj\Debug\Microsoft.Dynamics.Retail.Pos.PurchaseOrderReceiving.Properties.Resources.resources
+C:\POS\POS Plug-ins\Services\PurchaseOrderReceiving\obj\Debug\Microsoft.Dynamics.Retail.Pos.PurchaseOrderReceiving.WinFormsTouch.frmPurchaseOrderReceiptSearch.resources
+C:\POS\POS Plug-ins\Services\PurchaseOrderReceiving\obj\Debug\PurchaseOrderReceiving.csproj.GenerateResource.Cache
+C:\POS\POS Plug-ins\Services\PurchaseOrderReceiving\obj\Debug\PurchaseOrderReceiving.dll.licenses
+C:\POS\POS Plug-ins\Services\PurchaseOrderReceiving\obj\Debug\PurchaseOrderReceiving.dll
+C:\POS\POS Plug-ins\Services\PurchaseOrderReceiving\obj\Debug\PurchaseOrderReceiving.pdb
+C:\POS\POS Plug-ins\Services\PurchaseOrderReceiving\obj\Debug\PurchaseOrderReceiving.csprojResolveAssemblyReference.cache

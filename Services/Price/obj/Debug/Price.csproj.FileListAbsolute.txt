@@ -1,0 +1,6 @@
+C:\POS\POS Plug-ins\Services\Price\bin\Debug\Price.dll
+C:\POS\POS Plug-ins\Services\Price\bin\Debug\Price.pdb
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Price.dll
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Price.pdb
+C:\POS\POS Plug-ins\Services\Price\obj\Debug\Price.dll
+C:\POS\POS Plug-ins\Services\Price\obj\Debug\Price.pdb
