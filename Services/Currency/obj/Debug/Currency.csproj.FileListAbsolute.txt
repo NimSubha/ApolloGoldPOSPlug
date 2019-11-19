@@ -1,0 +1,6 @@
+C:\POS\POS Plug-ins\Services\Currency\bin\Debug\Currency.dll
+C:\POS\POS Plug-ins\Services\Currency\bin\Debug\Currency.pdb
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Currency.dll
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Currency.pdb
+C:\POS\POS Plug-ins\Services\Currency\obj\Debug\Currency.dll
+C:\POS\POS Plug-ins\Services\Currency\obj\Debug\Currency.pdb

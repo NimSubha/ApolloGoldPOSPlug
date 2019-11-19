@@ -1,0 +1,20 @@
+C:\POS\POS Plug-ins\Services\Customer\bin\Debug\Customer.dll
+C:\POS\POS Plug-ins\Services\Customer\bin\Debug\Customer.pdb
+C:\POS\POS Plug-ins\Services\Customer\obj\Debug\Microsoft.Dynamics.Retail.Pos.Customer.frmReportList.resources
+C:\POS\POS Plug-ins\Services\Customer\obj\Debug\Microsoft.Dynamics.Retail.Pos.Customer.Properties.Resources.resources
+C:\POS\POS Plug-ins\Services\Customer\obj\Debug\Microsoft.Dynamics.Retail.Pos.Customer.WinFormsTouch.AddressUserControl.resources
+C:\POS\POS Plug-ins\Services\Customer\obj\Debug\Microsoft.Dynamics.Retail.Pos.Customer.WinFormsTouch.frmNewShippingAddress.resources
+C:\POS\POS Plug-ins\Services\Customer\obj\Debug\Microsoft.Dynamics.Retail.Pos.Customer.WinFormsTouch.frmCustomerSearch.resources
+C:\POS\POS Plug-ins\Services\Customer\obj\Debug\Microsoft.Dynamics.Retail.Pos.Customer.WinFormsTouch.frmCustomerTransactions.resources
+C:\POS\POS Plug-ins\Services\Customer\obj\Debug\Microsoft.Dynamics.Retail.Pos.Customer.WinFormsTouch.frmNewCustomer.resources
+C:\POS\POS Plug-ins\Services\Customer\obj\Debug\Microsoft.Dynamics.Retail.Pos.Customer.WinFormsTouch.frmPrintSelection.resources
+C:\POS\POS Plug-ins\Services\Customer\obj\Debug\Microsoft.Dynamics.Retail.Pos.Customer.WinFormsTouch.frmShippingAddressSearch.resources
+C:\POS\POS Plug-ins\Services\Customer\obj\Debug\Microsoft.Dynamics.Retail.Pos.Customer.WinFormsTouch.SelectSearchTypePopup.resources
+C:\POS\POS Plug-ins\Services\Customer\obj\Debug\Microsoft.Dynamics.Retail.Pos.Customer.WinFormsTouch.ViewAddressUserControl.resources
+C:\POS\POS Plug-ins\Services\Customer\obj\Debug\Customer.csproj.GenerateResource.Cache
+C:\POS\POS Plug-ins\Services\Customer\obj\Debug\Customer.dll.licenses
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Customer.dll
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Customer.pdb
+C:\POS\POS Plug-ins\Services\Customer\obj\Debug\Customer.csprojResolveAssemblyReference.cache
+C:\POS\POS Plug-ins\Services\Customer\obj\Debug\Customer.dll
+C:\POS\POS Plug-ins\Services\Customer\obj\Debug\Customer.pdb
