@@ -1,0 +1,7 @@
+C:\POS\POS Plug-ins\Services\EFTServiceOperationsService\bin\Debug\EFTServiceOperationsService.dll
+C:\POS\POS Plug-ins\Services\EFTServiceOperationsService\bin\Debug\EFTServiceOperationsService.pdb
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\EFTServiceOperationsService.dll
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\EFTServiceOperationsService.pdb
+C:\POS\POS Plug-ins\Services\EFTServiceOperationsService\obj\Debug\EFTServiceOperationsService.dll
+C:\POS\POS Plug-ins\Services\EFTServiceOperationsService\obj\Debug\EFTServiceOperationsService.pdb
+C:\POS\POS Plug-ins\Services\EFTServiceOperationsService\obj\Debug\EFTServiceOperationsService.csprojResolveAssemblyReference.cache
