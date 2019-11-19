@@ -1,0 +1,13 @@
+C:\POS\POS Plug-ins\Services\StockCount\bin\Debug\StockCount.dll
+C:\POS\POS Plug-ins\Services\StockCount\bin\Debug\StockCount.pdb
+C:\POS\POS Plug-ins\Services\StockCount\bin\Debug\Application.dll
+C:\POS\POS Plug-ins\Services\StockCount\bin\Debug\Application.pdb
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\StockCount.dll
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\StockCount.pdb
+C:\POS\POS Plug-ins\Services\StockCount\obj\Debug\Microsoft.Dynamics.Retail.Pos.StockCount.frmStockCountJournals.resources
+C:\POS\POS Plug-ins\Services\StockCount\obj\Debug\Microsoft.Dynamics.Retail.Pos.StockCount.frmStockCount.resources
+C:\POS\POS Plug-ins\Services\StockCount\obj\Debug\StockCount.csproj.GenerateResource.Cache
+C:\POS\POS Plug-ins\Services\StockCount\obj\Debug\StockCount.dll.licenses
+C:\POS\POS Plug-ins\Services\StockCount\obj\Debug\StockCount.dll
+C:\POS\POS Plug-ins\Services\StockCount\obj\Debug\StockCount.pdb
+C:\POS\POS Plug-ins\Services\StockCount\obj\Debug\StockCount.csprojResolveAssemblyReference.cache
