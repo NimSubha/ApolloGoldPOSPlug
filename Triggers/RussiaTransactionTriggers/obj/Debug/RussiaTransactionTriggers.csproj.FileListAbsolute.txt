@@ -1,0 +1,5 @@
+C:\POS\POS Plug-ins\Triggers\RussiaTransactionTriggers\bin\Debug\RussiaTransactionTriggers.dll
+C:\POS\POS Plug-ins\Triggers\RussiaTransactionTriggers\bin\Debug\RussiaTransactionTriggers.pdb
+C:\POS\POS Plug-ins\Triggers\RussiaTransactionTriggers\obj\Debug\RussiaTransactionTriggers.dll
+C:\POS\POS Plug-ins\Triggers\RussiaTransactionTriggers\obj\Debug\RussiaTransactionTriggers.pdb
+C:\POS\POS Plug-ins\Triggers\RussiaTransactionTriggers\obj\Debug\RussiaTransactionTriggers.csprojResolveAssemblyReference.cache

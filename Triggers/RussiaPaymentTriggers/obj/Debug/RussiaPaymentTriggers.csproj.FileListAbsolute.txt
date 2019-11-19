@@ -1,0 +1,4 @@
+C:\POS\POS Plug-ins\Triggers\RussiaPaymentTriggers\bin\Debug\RussiaPaymentTriggers.dll
+C:\POS\POS Plug-ins\Triggers\RussiaPaymentTriggers\bin\Debug\RussiaPaymentTriggers.pdb
+C:\POS\POS Plug-ins\Triggers\RussiaPaymentTriggers\obj\Debug\RussiaPaymentTriggers.dll
+C:\POS\POS Plug-ins\Triggers\RussiaPaymentTriggers\obj\Debug\RussiaPaymentTriggers.pdb

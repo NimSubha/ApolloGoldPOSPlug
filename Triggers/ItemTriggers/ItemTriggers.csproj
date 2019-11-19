@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6279233D-9B76-4C13-8E41-A249AD66547E}</ProjectGuid>
+    <SDKPath>..\..</SDKPath>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ItemTriggers</RootNamespace>
+    <AssemblyName>ItemTriggers</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\..\Program Files %28x86%29\Microsoft Dynamics AX\60\Retail POS\Triggers\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BlankOperations">
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\BlankOperations.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v11.2, Version=11.2.111.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\DevExpress 2011.2\Components\Bin\Framework\DevExpress.Utils.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Dialog">
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Dialog.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Enums">
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Triggers\Enums.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Dynamics.Retail.Pos.SystemCore">
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Microsoft.Dynamics.Retail.Pos.SystemCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POSControls">
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\POSControls.DLL</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POSProcesses">
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\POSProcesses.DLL</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Transaction">
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Transaction.DLL</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ItemTriggers.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Dynamics.Retail.Pos.Contracts">
+      <HintPath>$(SDKPath)\Microsoft.Dynamics.Retail.Pos.Contracts.dll</HintPath>
+      <Private>False</Private>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SystemFramework">
+      <HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\SystemFramework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SystemSettings">
+      <HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\SystemSettings.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
