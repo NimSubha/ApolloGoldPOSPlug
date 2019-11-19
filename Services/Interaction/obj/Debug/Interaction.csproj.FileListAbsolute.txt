@@ -1,0 +1,6 @@
+C:\POS\POS Plug-ins\Services\Interaction\bin\Debug\Interaction.dll
+C:\POS\POS Plug-ins\Services\Interaction\bin\Debug\Interaction.pdb
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Interaction.dll
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Interaction.pdb
+C:\POS\POS Plug-ins\Services\Interaction\obj\Debug\Interaction.dll
+C:\POS\POS Plug-ins\Services\Interaction\obj\Debug\Interaction.pdb
