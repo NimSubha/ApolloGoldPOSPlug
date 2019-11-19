@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TransData" targetNamespace="http://tempuri.org/TransData.xsd" xmlns:mstns="http://tempuri.org/TransData.xsd" xmlns="http://tempuri.org/TransData.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="AXPOS2012ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="AXPOS2012ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Microsoft.Dynamics.Retail.Pos.BlankOperations.Properties.Settings.GlobalReference.Default.AXPOS2012ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtTransDataTableAdapter" GeneratorDataComponentClassName="dtTransDataTableAdapter" Name="dtTransData" UserDataComponentName="dtTransDataTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AXPOS2012ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     RETAILTRANSACTIONSALESTRANS.ITEMID, 
+                      (CASE WHEN RETAIL_CUSTOMCALCULATIONS_TABLE.TRANSACTIONTYPE = 0 THEN 'Sale' WHEN RETAIL_CUSTOMCALCULATIONS_TABLE.TRANSACTIONTYPE = 1 THEN
+                       'Purchase' WHEN RETAIL_CUSTOMCALCULATIONS_TABLE.TRANSACTIONTYPE = 2 THEN 'Purchase Return' WHEN RETAIL_CUSTOMCALCULATIONS_TABLE.TRANSACTIONTYPE
+                       = 3 THEN 'Exchange' WHEN RETAIL_CUSTOMCALCULATIONS_TABLE.TRANSACTIONTYPE = 4 THEN 'Exchange Return' WHEN RETAIL_CUSTOMCALCULATIONS_TABLE.TRANSACTIONTYPE
+                       = 5 THEN 'Adjustment' END) AS TYPE, RETAIL_CUSTOMCALCULATIONS_TABLE.PIECES, RETAIL_CUSTOMCALCULATIONS_TABLE.QUANTITY, 
+                      RETAIL_CUSTOMCALCULATIONS_TABLE.TOTALAMOUNT, RETAILTRANSACTIONSALESTRANS.TRANSACTIONID
+FROM         RETAILTRANSACTIONSALESTRANS INNER JOIN
+                      RETAIL_CUSTOMCALCULATIONS_TABLE ON RETAILTRANSACTIONSALESTRANS.TRANSACTIONID = RETAIL_CUSTOMCALCULATIONS_TABLE.TRANSACTIONID AND 
+                      RETAILTRANSACTIONSALESTRANS.LINENUM = RETAIL_CUSTOMCALCULATIONS_TABLE.LINENUM
+
+ORDER BY RETAIL_CUSTOMCALCULATIONS_TABLE.TRANSACTIONID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TRANSACTIONID" DataSetColumn="TRANSACTIONID" />
+              <Mapping SourceColumn="ITEMID" DataSetColumn="ITEMID" />
+              <Mapping SourceColumn="TYPE" DataSetColumn="TYPE" />
+              <Mapping SourceColumn="PIECES" DataSetColumn="PIECES" />
+              <Mapping SourceColumn="QUANTITY" DataSetColumn="QUANTITY" />
+              <Mapping SourceColumn="TOTALAMOUNT" DataSetColumn="TOTALAMOUNT" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtTransOgpTableAdapter" GeneratorDataComponentClassName="dtTransOgpTableAdapter" Name="dtTransOgp" UserDataComponentName="dtTransOgpTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AXPOS2012ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select A.TRANSACTIONID,A.RECEIPTID,B.ITEMID,C.METALTYPE,ABS(D.QUANTITY) AS QNTY,D.EXPECTEDQUANTITY,D.CRate,
+ABS(D.AMOUNT) AS AMOUNT from RETAILTRANSACTIONTABLE A,RETAILTRANSACTIONSALESTRANS B,
+INVENTTABLE C,RETAIL_CUSTOMCALCULATIONS_TABLE D
+WHERE A.TRANSACTIONID=B.TRANSACTIONID AND B.TRANSACTIONID=D.TRANSACTIONID AND B.LINENUM=D.LINENUM AND B.ITEMID=C.ITEMID and d.transactiontype=1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TRANSACTIONID" DataSetColumn="TRANSACTIONID" />
+              <Mapping SourceColumn="RECEIPTID" DataSetColumn="RECEIPTID" />
+              <Mapping SourceColumn="ITEMID" DataSetColumn="ITEMID" />
+              <Mapping SourceColumn="METALTYPE" DataSetColumn="METALTYPE" />
+              <Mapping SourceColumn="QNTY" DataSetColumn="QNTY" />
+              <Mapping SourceColumn="EXPECTEDQUANTITY" DataSetColumn="EXPECTEDQUANTITY" />
+              <Mapping SourceColumn="CRate" DataSetColumn="CRate" />
+              <Mapping SourceColumn="AMOUNT" DataSetColumn="AMOUNT" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TransData" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TransData" msprop:Generator_UserDSName="TransData">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtTransData" msprop:Generator_TableClassName="dtTransDataDataTable" msprop:Generator_TableVarName="tabledtTransData" msprop:Generator_TablePropName="dtTransData" msprop:Generator_RowDeletingName="dtTransDataRowDeleting" msprop:Generator_UserTableName="dtTransData" msprop:Generator_RowChangingName="dtTransDataRowChanging" msprop:Generator_RowEvHandlerName="dtTransDataRowChangeEventHandler" msprop:Generator_RowDeletedName="dtTransDataRowDeleted" msprop:Generator_RowEvArgName="dtTransDataRowChangeEvent" msprop:Generator_RowChangedName="dtTransDataRowChanged" msprop:Generator_RowClassName="dtTransDataRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TRANSACTIONID" msprop:Generator_ColumnVarNameInTable="columnTRANSACTIONID" msprop:Generator_ColumnPropNameInRow="TRANSACTIONID" msprop:Generator_ColumnPropNameInTable="TRANSACTIONIDColumn" msprop:Generator_UserColumnName="TRANSACTIONID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="44" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ITEMID" msprop:Generator_ColumnVarNameInTable="columnITEMID" msprop:Generator_ColumnPropNameInRow="ITEMID" msprop:Generator_ColumnPropNameInTable="ITEMIDColumn" msprop:Generator_UserColumnName="ITEMID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TYPE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTYPE" msprop:Generator_ColumnPropNameInRow="TYPE" msprop:Generator_ColumnPropNameInTable="TYPEColumn" msprop:Generator_UserColumnName="TYPE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PIECES" msprop:Generator_ColumnVarNameInTable="columnPIECES" msprop:Generator_ColumnPropNameInRow="PIECES" msprop:Generator_ColumnPropNameInTable="PIECESColumn" msprop:Generator_UserColumnName="PIECES" type="xs:decimal" />
+              <xs:element name="QUANTITY" msprop:Generator_ColumnVarNameInTable="columnQUANTITY" msprop:Generator_ColumnPropNameInRow="QUANTITY" msprop:Generator_ColumnPropNameInTable="QUANTITYColumn" msprop:Generator_UserColumnName="QUANTITY" type="xs:decimal" />
+              <xs:element name="TOTALAMOUNT" msprop:Generator_ColumnVarNameInTable="columnTOTALAMOUNT" msprop:Generator_ColumnPropNameInRow="TOTALAMOUNT" msprop:Generator_ColumnPropNameInTable="TOTALAMOUNTColumn" msprop:Generator_UserColumnName="TOTALAMOUNT" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtTransOgp" msprop:Generator_TableClassName="dtTransOgpDataTable" msprop:Generator_TableVarName="tabledtTransOgp" msprop:Generator_TablePropName="dtTransOgp" msprop:Generator_RowDeletingName="dtTransOgpRowDeleting" msprop:Generator_UserTableName="dtTransOgp" msprop:Generator_RowChangingName="dtTransOgpRowChanging" msprop:Generator_RowEvHandlerName="dtTransOgpRowChangeEventHandler" msprop:Generator_RowDeletedName="dtTransOgpRowDeleted" msprop:Generator_RowEvArgName="dtTransOgpRowChangeEvent" msprop:Generator_RowChangedName="dtTransOgpRowChanged" msprop:Generator_RowClassName="dtTransOgpRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TRANSACTIONID" msprop:Generator_ColumnVarNameInTable="columnTRANSACTIONID" msprop:Generator_ColumnPropNameInRow="TRANSACTIONID" msprop:Generator_ColumnPropNameInTable="TRANSACTIONIDColumn" msprop:Generator_UserColumnName="TRANSACTIONID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="44" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RECEIPTID" msprop:Generator_ColumnVarNameInTable="columnRECEIPTID" msprop:Generator_ColumnPropNameInRow="RECEIPTID" msprop:Generator_ColumnPropNameInTable="RECEIPTIDColumn" msprop:Generator_UserColumnName="RECEIPTID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ITEMID" msprop:Generator_ColumnVarNameInTable="columnITEMID" msprop:Generator_ColumnPropNameInRow="ITEMID" msprop:Generator_ColumnPropNameInTable="ITEMIDColumn" msprop:Generator_UserColumnName="ITEMID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="METALTYPE" msprop:Generator_ColumnVarNameInTable="columnMETALTYPE" msprop:Generator_ColumnPropNameInRow="METALTYPE" msprop:Generator_ColumnPropNameInTable="METALTYPEColumn" msprop:Generator_UserColumnName="METALTYPE" type="xs:int" />
+              <xs:element name="QNTY" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnQNTY" msprop:Generator_ColumnPropNameInRow="QNTY" msprop:Generator_ColumnPropNameInTable="QNTYColumn" msprop:Generator_UserColumnName="QNTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="EXPECTEDQUANTITY" msprop:Generator_ColumnVarNameInTable="columnEXPECTEDQUANTITY" msprop:Generator_ColumnPropNameInRow="EXPECTEDQUANTITY" msprop:Generator_ColumnPropNameInTable="EXPECTEDQUANTITYColumn" msprop:Generator_UserColumnName="EXPECTEDQUANTITY" type="xs:decimal" />
+              <xs:element name="CRate" msprop:Generator_ColumnVarNameInTable="columnCRate" msprop:Generator_ColumnPropNameInRow="CRate" msprop:Generator_ColumnPropNameInTable="CRateColumn" msprop:Generator_UserColumnName="CRate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AMOUNT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAMOUNT" msprop:Generator_ColumnPropNameInRow="AMOUNT" msprop:Generator_ColumnPropNameInTable="AMOUNTColumn" msprop:Generator_UserColumnName="AMOUNT" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
