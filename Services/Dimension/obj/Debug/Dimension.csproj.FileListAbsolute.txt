@@ -1,0 +1,6 @@
+C:\POS\POS Plug-ins\Services\Dimension\bin\Debug\Dimension.dll
+C:\POS\POS Plug-ins\Services\Dimension\bin\Debug\Dimension.pdb
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Dimension.dll
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Dimension.pdb
+C:\POS\POS Plug-ins\Services\Dimension\obj\Debug\Dimension.dll
+C:\POS\POS Plug-ins\Services\Dimension\obj\Debug\Dimension.pdb
