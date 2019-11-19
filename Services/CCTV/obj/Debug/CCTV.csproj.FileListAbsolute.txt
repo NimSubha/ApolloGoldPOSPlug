@@ -1,0 +1,6 @@
+C:\POS\POS Plug-ins\Services\CCTV\bin\Debug\CCTV.dll
+C:\POS\POS Plug-ins\Services\CCTV\bin\Debug\CCTV.pdb
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\CCTV.dll
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\CCTV.pdb
+C:\POS\POS Plug-ins\Services\CCTV\obj\Debug\CCTV.dll
+C:\POS\POS Plug-ins\Services\CCTV\obj\Debug\CCTV.pdb
