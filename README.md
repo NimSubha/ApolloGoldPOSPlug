@@ -1,0 +1,2 @@
+# ApolloGoldPOSPlug
+ApolloGoldPOSPlug_INS
