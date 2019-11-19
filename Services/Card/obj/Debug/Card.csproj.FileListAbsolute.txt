@@ -1,0 +1,8 @@
+C:\POS\POS Plug-ins\Services\Card\bin\Debug\Card.dll
+C:\POS\POS Plug-ins\Services\Card\bin\Debug\Card.pdb
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Card.dll
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Card.pdb
+C:\POS\POS Plug-ins\Services\Card\obj\Debug\Microsoft.Dynamics.Retail.Pos.Card.frmSelectCardType.resources
+C:\POS\POS Plug-ins\Services\Card\obj\Debug\Card.csproj.GenerateResource.Cache
+C:\POS\POS Plug-ins\Services\Card\obj\Debug\Card.dll
+C:\POS\POS Plug-ins\Services\Card\obj\Debug\Card.pdb

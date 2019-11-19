@@ -1,0 +1,6 @@
+C:\POS\POS Plug-ins\Services\Barcodes\bin\Debug\Barcode.dll
+C:\POS\POS Plug-ins\Services\Barcodes\bin\Debug\Barcode.pdb
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Barcode.dll
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Barcode.pdb
+C:\POS\POS Plug-ins\Services\Barcodes\obj\Debug\Barcode.dll
+C:\POS\POS Plug-ins\Services\Barcodes\obj\Debug\Barcode.pdb
