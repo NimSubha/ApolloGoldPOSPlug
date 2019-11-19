@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsArticleWiseStockTaking" targetNamespace="http://tempuri.org/dsArticleWiseStockTaking.xsd" xmlns:mstns="http://tempuri.org/dsArticleWiseStockTaking.xsd" xmlns="http://tempuri.org/dsArticleWiseStockTaking.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="POS4001ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="POS4001ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Microsoft.Dynamics.Retail.Pos.BlankOperations.Properties.Settings.GlobalReference.Default.POS4001ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="HEADERINFOTableAdapter" GeneratorDataComponentClassName="HEADERINFOTableAdapter" Name="HEADERINFO" UserDataComponentName="HEADERINFOTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="POS4001ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText> select '' VOUCHERNO,
+  '' TRANSDATE,
+  '' WAREHOUSE,
+  '' STOCKTAKINGTYPE,
+  '' STOCKTYPE,
+  '' PRODUCTTYPE,
+  '' ARTICLE,
+  '' SUBARTICLE</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="VOUCHERNO" DataSetColumn="VOUCHERNO" />
+              <Mapping SourceColumn="TRANSDATE" DataSetColumn="TRANSDATE" />
+              <Mapping SourceColumn="WAREHOUSE" DataSetColumn="WAREHOUSE" />
+              <Mapping SourceColumn="STOCKTAKINGTYPE" DataSetColumn="STOCKTAKINGTYPE" />
+              <Mapping SourceColumn="STOCKTYPE" DataSetColumn="STOCKTYPE" />
+              <Mapping SourceColumn="PRODUCTTYPE" DataSetColumn="PRODUCTTYPE" />
+              <Mapping SourceColumn="ARTICLE" DataSetColumn="ARTICLE" />
+              <Mapping SourceColumn="SUBARTICLE" DataSetColumn="SUBARTICLE" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DETAILINFOTableAdapter" GeneratorDataComponentClassName="DETAILINFOTableAdapter" Name="DETAILINFO" UserDataComponentName="DETAILINFOTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="POS4001ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText> select '' ArticleCode,
+ '' ArticleName,
+'' as SubArticle,
+'' as MetalType,
+ 0 OnHandCW,
+  0 OnHandQty,
+  0 PhysicalCW,
+  0 PhysicalQty,
+  0 DifferenceCW,
+  0 DifferenceQty,
+0 BarCodeLabelQty,
+ '' CountedBy,
+ '' Name,
+ '' Remarks</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ArticleCode" DataSetColumn="ArticleCode" />
+              <Mapping SourceColumn="ArticleName" DataSetColumn="ArticleName" />
+              <Mapping SourceColumn="CountedBy" DataSetColumn="CountedBy" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Remarks" DataSetColumn="Remarks" />
+              <Mapping SourceColumn="OnHandCW" DataSetColumn="OnHandCW" />
+              <Mapping SourceColumn="OnHandQty" DataSetColumn="OnHandQty" />
+              <Mapping SourceColumn="PhysicalCW" DataSetColumn="PhysicalCW" />
+              <Mapping SourceColumn="PhysicalQty" DataSetColumn="PhysicalQty" />
+              <Mapping SourceColumn="DifferenceCW" DataSetColumn="DifferenceCW" />
+              <Mapping SourceColumn="DifferenceQty" DataSetColumn="DifferenceQty" />
+              <Mapping SourceColumn="SubArticle" DataSetColumn="SubArticle" />
+              <Mapping SourceColumn="MetalType" DataSetColumn="MetalType" />
+              <Mapping SourceColumn="BarCodeLabelQty" DataSetColumn="BarCodeLabelQty" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsArticleWiseStockTaking" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsArticleWiseStockTaking" msprop:Generator_UserDSName="dsArticleWiseStockTaking">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="HEADERINFO" msprop:Generator_TableClassName="HEADERINFODataTable" msprop:Generator_TableVarName="tableHEADERINFO" msprop:Generator_RowChangedName="HEADERINFORowChanged" msprop:Generator_TablePropName="HEADERINFO" msprop:Generator_RowDeletingName="HEADERINFORowDeleting" msprop:Generator_RowChangingName="HEADERINFORowChanging" msprop:Generator_RowEvHandlerName="HEADERINFORowChangeEventHandler" msprop:Generator_RowDeletedName="HEADERINFORowDeleted" msprop:Generator_RowClassName="HEADERINFORow" msprop:Generator_UserTableName="HEADERINFO" msprop:Generator_RowEvArgName="HEADERINFORowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="VOUCHERNO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnVOUCHERNO" msprop:Generator_ColumnPropNameInRow="VOUCHERNO" msprop:Generator_ColumnPropNameInTable="VOUCHERNOColumn" msprop:Generator_UserColumnName="VOUCHERNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TRANSDATE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTRANSDATE" msprop:Generator_ColumnPropNameInRow="TRANSDATE" msprop:Generator_ColumnPropNameInTable="TRANSDATEColumn" msprop:Generator_UserColumnName="TRANSDATE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WAREHOUSE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnWAREHOUSE" msprop:Generator_ColumnPropNameInRow="WAREHOUSE" msprop:Generator_ColumnPropNameInTable="WAREHOUSEColumn" msprop:Generator_UserColumnName="WAREHOUSE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="STOCKTAKINGTYPE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSTOCKTAKINGTYPE" msprop:Generator_ColumnPropNameInRow="STOCKTAKINGTYPE" msprop:Generator_ColumnPropNameInTable="STOCKTAKINGTYPEColumn" msprop:Generator_UserColumnName="STOCKTAKINGTYPE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="STOCKTYPE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSTOCKTYPE" msprop:Generator_ColumnPropNameInRow="STOCKTYPE" msprop:Generator_ColumnPropNameInTable="STOCKTYPEColumn" msprop:Generator_UserColumnName="STOCKTYPE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PRODUCTTYPE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPRODUCTTYPE" msprop:Generator_ColumnPropNameInRow="PRODUCTTYPE" msprop:Generator_ColumnPropNameInTable="PRODUCTTYPEColumn" msprop:Generator_UserColumnName="PRODUCTTYPE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ARTICLE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnARTICLE" msprop:Generator_ColumnPropNameInRow="ARTICLE" msprop:Generator_ColumnPropNameInTable="ARTICLEColumn" msprop:Generator_UserColumnName="ARTICLE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SUBARTICLE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSUBARTICLE" msprop:Generator_ColumnPropNameInRow="SUBARTICLE" msprop:Generator_ColumnPropNameInTable="SUBARTICLEColumn" msprop:Generator_UserColumnName="SUBARTICLE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DETAILINFO" msprop:Generator_TableClassName="DETAILINFODataTable" msprop:Generator_TableVarName="tableDETAILINFO" msprop:Generator_RowChangedName="DETAILINFORowChanged" msprop:Generator_TablePropName="DETAILINFO" msprop:Generator_RowDeletingName="DETAILINFORowDeleting" msprop:Generator_RowChangingName="DETAILINFORowChanging" msprop:Generator_RowEvHandlerName="DETAILINFORowChangeEventHandler" msprop:Generator_RowDeletedName="DETAILINFORowDeleted" msprop:Generator_RowClassName="DETAILINFORow" msprop:Generator_UserTableName="DETAILINFO" msprop:Generator_RowEvArgName="DETAILINFORowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ArticleCode" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnArticleCode" msprop:Generator_ColumnPropNameInRow="ArticleCode" msprop:Generator_ColumnPropNameInTable="ArticleCodeColumn" msprop:Generator_UserColumnName="ArticleCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ArticleName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnArticleName" msprop:Generator_ColumnPropNameInRow="ArticleName" msprop:Generator_ColumnPropNameInTable="ArticleNameColumn" msprop:Generator_UserColumnName="ArticleName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CountedBy" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCountedBy" msprop:Generator_ColumnPropNameInRow="CountedBy" msprop:Generator_ColumnPropNameInTable="CountedByColumn" msprop:Generator_UserColumnName="CountedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Remarks" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRemarks" msprop:Generator_ColumnPropNameInRow="Remarks" msprop:Generator_ColumnPropNameInTable="RemarksColumn" msprop:Generator_UserColumnName="Remarks" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OnHandCW" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnOnHandCW" msprop:Generator_ColumnPropNameInRow="OnHandCW" msprop:Generator_ColumnPropNameInTable="OnHandCWColumn" msprop:Generator_UserColumnName="OnHandCW" type="xs:int" minOccurs="0" />
+              <xs:element name="OnHandQty" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnOnHandQty" msprop:Generator_ColumnPropNameInRow="OnHandQty" msprop:Generator_ColumnPropNameInTable="OnHandQtyColumn" msprop:Generator_UserColumnName="OnHandQty" type="xs:int" minOccurs="0" />
+              <xs:element name="PhysicalCW" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPhysicalCW" msprop:Generator_ColumnPropNameInRow="PhysicalCW" msprop:Generator_ColumnPropNameInTable="PhysicalCWColumn" msprop:Generator_UserColumnName="PhysicalCW" type="xs:int" minOccurs="0" />
+              <xs:element name="PhysicalQty" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPhysicalQty" msprop:Generator_ColumnPropNameInRow="PhysicalQty" msprop:Generator_ColumnPropNameInTable="PhysicalQtyColumn" msprop:Generator_UserColumnName="PhysicalQty" type="xs:int" minOccurs="0" />
+              <xs:element name="DifferenceCW" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDifferenceCW" msprop:Generator_ColumnPropNameInRow="DifferenceCW" msprop:Generator_ColumnPropNameInTable="DifferenceCWColumn" msprop:Generator_UserColumnName="DifferenceCW" type="xs:int" minOccurs="0" />
+              <xs:element name="DifferenceQty" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDifferenceQty" msprop:Generator_ColumnPropNameInRow="DifferenceQty" msprop:Generator_ColumnPropNameInTable="DifferenceQtyColumn" msprop:Generator_UserColumnName="DifferenceQty" type="xs:int" minOccurs="0" />
+              <xs:element name="SubArticle" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSubArticle" msprop:Generator_ColumnPropNameInRow="SubArticle" msprop:Generator_ColumnPropNameInTable="SubArticleColumn" msprop:Generator_UserColumnName="SubArticle" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MetalType" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMetalType" msprop:Generator_ColumnPropNameInRow="MetalType" msprop:Generator_ColumnPropNameInTable="MetalTypeColumn" msprop:Generator_UserColumnName="MetalType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BarCodeLabelQty" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBarCodeLabelQty" msprop:Generator_ColumnPropNameInRow="BarCodeLabelQty" msprop:Generator_ColumnPropNameInTable="BarCodeLabelQtyColumn" msprop:Generator_UserColumnName="BarCodeLabelQty" type="xs:int" minOccurs="0" />
+              <xs:element name="SubArticleName" msprop:Generator_ColumnVarNameInTable="columnSubArticleName" msprop:Generator_ColumnPropNameInRow="SubArticleName" msprop:Generator_ColumnPropNameInTable="SubArticleNameColumn" msprop:Generator_UserColumnName="SubArticleName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

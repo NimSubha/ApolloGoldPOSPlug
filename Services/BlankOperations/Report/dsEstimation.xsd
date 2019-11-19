@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsEstimation" targetNamespace="http://tempuri.org/dsEstimation.xsd" xmlns:mstns="http://tempuri.org/dsEstimation.xsd" xmlns="http://tempuri.org/dsEstimation.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="3" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="AXPOS2012ConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="AXPOS2012ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Microsoft.Dynamics.Retail.Pos.BlankOperations.Properties.Settings.GlobalReference.Default.AXPOS2012ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="POS4001ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="POS4001ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Microsoft.Dynamics.Retail.Pos.BlankOperations.Properties.Settings.GlobalReference.Default.POS4001ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="POS4001ConnectionString6" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="POS4001ConnectionString6 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Microsoft.Dynamics.Retail.Pos.BlankOperations.Properties.Settings.GlobalReference.Default.POS4001ConnectionString6" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="AGPLPOSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="AGPLPOSConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Microsoft.Dynamics.Retail.Pos.BlankOperations.Properties.Settings.GlobalReference.Default.AGPLPOSConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DetailTableAdapter" GeneratorDataComponentClassName="DetailTableAdapter" Name="Detail" UserDataComponentName="DetailTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AGPLPOSConnectionString (Settings)" DbObjectName="AGPLPOS.dbo.RETAIL_CUSTOMCALCULATIONS_TABLE" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT '' AS ITEMID, LINENUM, ISNULL(MAKINGAMOUNT,0) AS MAKINGAMOUNT, ISNULL(MakingDiscountAmount,0) AS MakingDisc, ISNULL(WastageAmount,0) AS WastageAmount FROM RETAIL_CUSTOMCALCULATIONS_TABLE </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ITEMID" DataSetColumn="ITEMID" />
+              <Mapping SourceColumn="LINENUM" DataSetColumn="LINENUM" />
+              <Mapping SourceColumn="MAKINGAMOUNT" DataSetColumn="MAKINGAMOUNT" />
+              <Mapping SourceColumn="MakingDisc" DataSetColumn="MakingDisc" />
+              <Mapping SourceColumn="WastageAmount" DataSetColumn="WastageAmount" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="IngredientTableAdapter" GeneratorDataComponentClassName="IngredientTableAdapter" Name="Ingredient" UserDataComponentName="IngredientTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AGPLPOSConnectionString (Settings)" DbObjectName="AGPLPOS.dbo.RETAIL_SALE_INGREDIENTS_DETAILS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT SKUNUMBER,ITEMID,LINENUM,REFLINENUM,InventSizeID,InventColorID,ConfigID,UnitID, 0 AS METALTYPE,QTY,PCS,CRATE,CVALUE, ISNULL(IngrdDiscTotAmt,0) AS INGRDDISCAMT  FROM RETAIL_SALE_INGREDIENTS_DETAILS</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SKUNUMBER" DataSetColumn="SKUNUMBER" />
+              <Mapping SourceColumn="ITEMID" DataSetColumn="ITEMID" />
+              <Mapping SourceColumn="LINENUM" DataSetColumn="LINENUM" />
+              <Mapping SourceColumn="REFLINENUM" DataSetColumn="REFLINENUM" />
+              <Mapping SourceColumn="InventSizeID" DataSetColumn="InventSizeID" />
+              <Mapping SourceColumn="InventColorID" DataSetColumn="InventColorID" />
+              <Mapping SourceColumn="ConfigID" DataSetColumn="ConfigID" />
+              <Mapping SourceColumn="UnitID" DataSetColumn="UnitID" />
+              <Mapping SourceColumn="METALTYPE" DataSetColumn="METALTYPE" />
+              <Mapping SourceColumn="QTY" DataSetColumn="QTY" />
+              <Mapping SourceColumn="PCS" DataSetColumn="PCS" />
+              <Mapping SourceColumn="CRATE" DataSetColumn="CRATE" />
+              <Mapping SourceColumn="CVALUE" DataSetColumn="CVALUE" />
+              <Mapping SourceColumn="INGRDDISCAMT" DataSetColumn="INGRDDISCAMT" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DetailNewTableAdapter" GeneratorDataComponentClassName="DetailNewTableAdapter" Name="DetailNew" UserDataComponentName="DetailNewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AGPLPOSConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText> select 0 as SLNo, '' as TransType,
+'' as SKU ,
+'' as [DESCRIPTION],
+0 as QTY,
+0 as GRAMWT,
+0 STONEWT,
+0 NETWT,
+0 GOLDRATE,
+0 GOLDVALUE,
+0 MAKINGCHARGE ,
+0 MAKINGCHARGETOTAL,
+0 STONEVALUE,
+0 TAXVALUE ,
+0 AS AMOUNT,
+0 as Discount,
+'' CONFIGID,
+'' SALESMAN
+	</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SLNo" DataSetColumn="SLNo" />
+              <Mapping SourceColumn="SKU" DataSetColumn="SKU" />
+              <Mapping SourceColumn="DESCRIPTION" DataSetColumn="DESCRIPTION" />
+              <Mapping SourceColumn="QTY" DataSetColumn="QTY" />
+              <Mapping SourceColumn="GRAMWT" DataSetColumn="GRAMWT" />
+              <Mapping SourceColumn="STONEWT" DataSetColumn="STONEWT" />
+              <Mapping SourceColumn="NETWT" DataSetColumn="NETWT" />
+              <Mapping SourceColumn="GOLDRATE" DataSetColumn="GOLDRATE" />
+              <Mapping SourceColumn="GOLDVALUE" DataSetColumn="GOLDVALUE" />
+              <Mapping SourceColumn="MAKINGCHARGE" DataSetColumn="MAKINGCHARGE" />
+              <Mapping SourceColumn="MAKINGCHARGETOTAL" DataSetColumn="MAKINGCHARGETOTAL" />
+              <Mapping SourceColumn="STONEVALUE" DataSetColumn="STONEVALUE" />
+              <Mapping SourceColumn="AMOUNT" DataSetColumn="AMOUNT" />
+              <Mapping SourceColumn="CONFIGID" DataSetColumn="CONFIGID" />
+              <Mapping SourceColumn="TransType" DataSetColumn="TransType" />
+              <Mapping SourceColumn="SALESMAN" DataSetColumn="SALESMAN" />
+              <Mapping SourceColumn="TAXVALUE" DataSetColumn="TAXVALUE" />
+              <Mapping SourceColumn="Discount" DataSetColumn="Discount" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsEstimation" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsEstimation" msprop:Generator_UserDSName="dsEstimation">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Detail" msprop:Generator_TableClassName="DetailDataTable" msprop:Generator_TableVarName="tableDetail" msprop:Generator_RowChangedName="DetailRowChanged" msprop:Generator_TablePropName="Detail" msprop:Generator_RowDeletingName="DetailRowDeleting" msprop:Generator_RowChangingName="DetailRowChanging" msprop:Generator_RowEvHandlerName="DetailRowChangeEventHandler" msprop:Generator_RowDeletedName="DetailRowDeleted" msprop:Generator_RowClassName="DetailRow" msprop:Generator_UserTableName="Detail" msprop:Generator_RowEvArgName="DetailRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ITEMID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnITEMID" msprop:Generator_ColumnPropNameInRow="ITEMID" msprop:Generator_ColumnPropNameInTable="ITEMIDColumn" msprop:Generator_UserColumnName="ITEMID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LINENUM" msprop:Generator_ColumnVarNameInTable="columnLINENUM" msprop:Generator_ColumnPropNameInRow="LINENUM" msprop:Generator_ColumnPropNameInTable="LINENUMColumn" msprop:Generator_UserColumnName="LINENUM" type="xs:decimal" />
+              <xs:element name="MAKINGAMOUNT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMAKINGAMOUNT" msprop:Generator_ColumnPropNameInRow="MAKINGAMOUNT" msprop:Generator_ColumnPropNameInTable="MAKINGAMOUNTColumn" msprop:Generator_UserColumnName="MAKINGAMOUNT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MakingDisc" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMakingDisc" msprop:Generator_ColumnPropNameInRow="MakingDisc" msprop:Generator_ColumnPropNameInTable="MakingDiscColumn" msprop:Generator_UserColumnName="MakingDisc" type="xs:decimal" minOccurs="0" />
+              <xs:element name="WastageAmount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnWastageAmount" msprop:Generator_ColumnPropNameInRow="WastageAmount" msprop:Generator_ColumnPropNameInTable="WastageAmountColumn" msprop:Generator_UserColumnName="WastageAmount" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Ingredient" msprop:Generator_TableClassName="IngredientDataTable" msprop:Generator_TableVarName="tableIngredient" msprop:Generator_RowChangedName="IngredientRowChanged" msprop:Generator_TablePropName="Ingredient" msprop:Generator_RowDeletingName="IngredientRowDeleting" msprop:Generator_RowChangingName="IngredientRowChanging" msprop:Generator_RowEvHandlerName="IngredientRowChangeEventHandler" msprop:Generator_RowDeletedName="IngredientRowDeleted" msprop:Generator_RowClassName="IngredientRow" msprop:Generator_UserTableName="Ingredient" msprop:Generator_RowEvArgName="IngredientRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SKUNUMBER" msprop:Generator_ColumnVarNameInTable="columnSKUNUMBER" msprop:Generator_ColumnPropNameInRow="SKUNUMBER" msprop:Generator_ColumnPropNameInTable="SKUNUMBERColumn" msprop:Generator_UserColumnName="SKUNUMBER" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ITEMID" msprop:Generator_ColumnVarNameInTable="columnITEMID" msprop:Generator_ColumnPropNameInRow="ITEMID" msprop:Generator_ColumnPropNameInTable="ITEMIDColumn" msprop:Generator_UserColumnName="ITEMID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LINENUM" msprop:Generator_ColumnVarNameInTable="columnLINENUM" msprop:Generator_ColumnPropNameInRow="LINENUM" msprop:Generator_ColumnPropNameInTable="LINENUMColumn" msprop:Generator_UserColumnName="LINENUM" type="xs:decimal" />
+              <xs:element name="REFLINENUM" msprop:Generator_ColumnVarNameInTable="columnREFLINENUM" msprop:Generator_ColumnPropNameInRow="REFLINENUM" msprop:Generator_ColumnPropNameInTable="REFLINENUMColumn" msprop:Generator_UserColumnName="REFLINENUM" type="xs:decimal" />
+              <xs:element name="InventSizeID" msprop:Generator_ColumnVarNameInTable="columnInventSizeID" msprop:Generator_ColumnPropNameInRow="InventSizeID" msprop:Generator_ColumnPropNameInTable="InventSizeIDColumn" msprop:Generator_UserColumnName="InventSizeID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InventColorID" msprop:Generator_ColumnVarNameInTable="columnInventColorID" msprop:Generator_ColumnPropNameInRow="InventColorID" msprop:Generator_ColumnPropNameInTable="InventColorIDColumn" msprop:Generator_UserColumnName="InventColorID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ConfigID" msprop:Generator_ColumnVarNameInTable="columnConfigID" msprop:Generator_ColumnPropNameInRow="ConfigID" msprop:Generator_ColumnPropNameInTable="ConfigIDColumn" msprop:Generator_UserColumnName="ConfigID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UnitID" msprop:Generator_ColumnVarNameInTable="columnUnitID" msprop:Generator_ColumnPropNameInRow="UnitID" msprop:Generator_ColumnPropNameInTable="UnitIDColumn" msprop:Generator_UserColumnName="UnitID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="METALTYPE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMETALTYPE" msprop:Generator_ColumnPropNameInRow="METALTYPE" msprop:Generator_ColumnPropNameInTable="METALTYPEColumn" msprop:Generator_UserColumnName="METALTYPE" type="xs:int" minOccurs="0" />
+              <xs:element name="QTY" msprop:Generator_ColumnVarNameInTable="columnQTY" msprop:Generator_ColumnPropNameInRow="QTY" msprop:Generator_ColumnPropNameInTable="QTYColumn" msprop:Generator_UserColumnName="QTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PCS" msprop:Generator_ColumnVarNameInTable="columnPCS" msprop:Generator_ColumnPropNameInRow="PCS" msprop:Generator_ColumnPropNameInTable="PCSColumn" msprop:Generator_UserColumnName="PCS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CRATE" msprop:Generator_ColumnVarNameInTable="columnCRATE" msprop:Generator_ColumnPropNameInRow="CRATE" msprop:Generator_ColumnPropNameInTable="CRATEColumn" msprop:Generator_UserColumnName="CRATE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CVALUE" msprop:Generator_ColumnVarNameInTable="columnCVALUE" msprop:Generator_ColumnPropNameInRow="CVALUE" msprop:Generator_ColumnPropNameInTable="CVALUEColumn" msprop:Generator_UserColumnName="CVALUE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INGRDDISCAMT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnINGRDDISCAMT" msprop:Generator_ColumnPropNameInRow="INGRDDISCAMT" msprop:Generator_ColumnPropNameInTable="INGRDDISCAMTColumn" msprop:Generator_UserColumnName="INGRDDISCAMT" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DetailNew" msprop:Generator_TableClassName="DetailNewDataTable" msprop:Generator_TableVarName="tableDetailNew" msprop:Generator_TablePropName="DetailNew" msprop:Generator_RowDeletingName="DetailNewRowDeleting" msprop:Generator_RowChangingName="DetailNewRowChanging" msprop:Generator_RowEvHandlerName="DetailNewRowChangeEventHandler" msprop:Generator_RowDeletedName="DetailNewRowDeleted" msprop:Generator_UserTableName="DetailNew" msprop:Generator_RowChangedName="DetailNewRowChanged" msprop:Generator_RowEvArgName="DetailNewRowChangeEvent" msprop:Generator_RowClassName="DetailNewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SLNo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSLNo" msprop:Generator_ColumnPropNameInRow="SLNo" msprop:Generator_ColumnPropNameInTable="SLNoColumn" msprop:Generator_UserColumnName="SLNo" type="xs:int" minOccurs="0" />
+              <xs:element name="SKU" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSKU" msprop:Generator_ColumnPropNameInRow="SKU" msprop:Generator_ColumnPropNameInTable="SKUColumn" msprop:Generator_UserColumnName="SKU" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCRIPTION" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDESCRIPTION" msprop:Generator_ColumnPropNameInRow="DESCRIPTION" msprop:Generator_ColumnPropNameInTable="DESCRIPTIONColumn" msprop:Generator_UserColumnName="DESCRIPTION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QTY" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnQTY" msprop:Generator_ColumnPropNameInRow="QTY" msprop:Generator_ColumnPropNameInTable="QTYColumn" msprop:Generator_UserColumnName="QTY" type="xs:int" minOccurs="0" />
+              <xs:element name="GRAMWT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnGRAMWT" msprop:Generator_ColumnPropNameInRow="GRAMWT" msprop:Generator_ColumnPropNameInTable="GRAMWTColumn" msprop:Generator_UserColumnName="GRAMWT" type="xs:int" minOccurs="0" />
+              <xs:element name="STONEWT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSTONEWT" msprop:Generator_ColumnPropNameInRow="STONEWT" msprop:Generator_ColumnPropNameInTable="STONEWTColumn" msprop:Generator_UserColumnName="STONEWT" type="xs:int" minOccurs="0" />
+              <xs:element name="NETWT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNETWT" msprop:Generator_ColumnPropNameInRow="NETWT" msprop:Generator_ColumnPropNameInTable="NETWTColumn" msprop:Generator_UserColumnName="NETWT" type="xs:int" minOccurs="0" />
+              <xs:element name="GOLDRATE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnGOLDRATE" msprop:Generator_ColumnPropNameInRow="GOLDRATE" msprop:Generator_ColumnPropNameInTable="GOLDRATEColumn" msprop:Generator_UserColumnName="GOLDRATE" type="xs:int" minOccurs="0" />
+              <xs:element name="GOLDVALUE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnGOLDVALUE" msprop:Generator_ColumnPropNameInRow="GOLDVALUE" msprop:Generator_ColumnPropNameInTable="GOLDVALUEColumn" msprop:Generator_UserColumnName="GOLDVALUE" type="xs:int" minOccurs="0" />
+              <xs:element name="MAKINGCHARGE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMAKINGCHARGE" msprop:Generator_ColumnPropNameInRow="MAKINGCHARGE" msprop:Generator_ColumnPropNameInTable="MAKINGCHARGEColumn" msprop:Generator_UserColumnName="MAKINGCHARGE" type="xs:int" minOccurs="0" />
+              <xs:element name="MAKINGCHARGETOTAL" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMAKINGCHARGETOTAL" msprop:Generator_ColumnPropNameInRow="MAKINGCHARGETOTAL" msprop:Generator_ColumnPropNameInTable="MAKINGCHARGETOTALColumn" msprop:Generator_UserColumnName="MAKINGCHARGETOTAL" type="xs:int" minOccurs="0" />
+              <xs:element name="STONEVALUE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSTONEVALUE" msprop:Generator_ColumnPropNameInRow="STONEVALUE" msprop:Generator_ColumnPropNameInTable="STONEVALUEColumn" msprop:Generator_UserColumnName="STONEVALUE" type="xs:int" minOccurs="0" />
+              <xs:element name="AMOUNT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAMOUNT" msprop:Generator_ColumnPropNameInRow="AMOUNT" msprop:Generator_ColumnPropNameInTable="AMOUNTColumn" msprop:Generator_UserColumnName="AMOUNT" type="xs:int" minOccurs="0" />
+              <xs:element name="CONFIGID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCONFIGID" msprop:Generator_ColumnPropNameInRow="CONFIGID" msprop:Generator_ColumnPropNameInTable="CONFIGIDColumn" msprop:Generator_UserColumnName="CONFIGID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransType" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTransType" msprop:Generator_ColumnPropNameInRow="TransType" msprop:Generator_ColumnPropNameInTable="TransTypeColumn" msprop:Generator_UserColumnName="TransType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SALESMAN" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSALESMAN" msprop:Generator_ColumnPropNameInRow="SALESMAN" msprop:Generator_ColumnPropNameInTable="SALESMANColumn" msprop:Generator_UserColumnName="SALESMAN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TAXVALUE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTAXVALUE" msprop:Generator_ColumnPropNameInRow="TAXVALUE" msprop:Generator_ColumnPropNameInTable="TAXVALUEColumn" msprop:Generator_UserColumnName="TAXVALUE" type="xs:int" minOccurs="0" />
+              <xs:element name="Discount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDiscount" msprop:Generator_ColumnPropNameInRow="Discount" msprop:Generator_ColumnPropNameInTable="DiscountColumn" msprop:Generator_UserColumnName="Discount" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

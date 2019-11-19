@@ -1,0 +1,759 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSSalesInvoice" targetNamespace="http://tempuri.org/DSSalesInvoice.xsd" xmlns:mstns="http://tempuri.org/DSSalesInvoice.xsd" xmlns="http://tempuri.org/DSSalesInvoice.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="6" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="POS8420ConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="POS8420ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Microsoft.Dynamics.Retail.Pos.BlankOperations.Properties.Settings.GlobalReference.Default.POS8420ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="POS4001ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="POS4001ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Microsoft.Dynamics.Retail.Pos.BlankOperations.Properties.Settings.GlobalReference.Default.POS4001ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="POS4001ConnectionString3" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="POS4001ConnectionString3 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Microsoft.Dynamics.Retail.Pos.BlankOperations.Properties.Settings.GlobalReference.Default.POS4001ConnectionString3" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="POS4001ConnectionString5" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="POS4001ConnectionString5 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Microsoft.Dynamics.Retail.Pos.BlankOperations.Properties.Settings.GlobalReference.Default.POS4001ConnectionString5" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="POS4001ConnectionString6" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="POS4001ConnectionString6 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Microsoft.Dynamics.Retail.Pos.BlankOperations.Properties.Settings.GlobalReference.Default.POS4001ConnectionString6" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="AGPLPOSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="AGPLPOSConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Microsoft.Dynamics.Retail.Pos.BlankOperations.Properties.Settings.GlobalReference.Default.AGPLPOSConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="AGPLPOSConnectionString1" IsAppSettingsProperty="true" Modifier="Assembly" Name="AGPLPOSConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Microsoft.Dynamics.Retail.Pos.BlankOperations.Properties.Settings.GlobalReference.Default.AGPLPOSConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DetailTableAdapter" GeneratorDataComponentClassName="DetailTableAdapter" Name="Detail" UserDataComponentName="DetailTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AGPLPOSConnectionString (Settings)" DbObjectName="AGPLPOS.dbo.GSTGetSalesInvData" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.GSTGetSalesInvData</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@Terminal" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@TRANSACTIONID" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="InputOutput" ParameterName="@P_EXECSTATUS" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SKUNUMBER" DataSetColumn="SKUNUMBER" />
+              <Mapping SourceColumn="ITEMDESC" DataSetColumn="ITEMDESC" />
+              <Mapping SourceColumn="CONFIGID" DataSetColumn="CONFIGID" />
+              <Mapping SourceColumn="QTY" DataSetColumn="QTY" />
+              <Mapping SourceColumn="PRICE" DataSetColumn="PRICE" />
+              <Mapping SourceColumn="GROSSWT" DataSetColumn="GROSSWT" />
+              <Mapping SourceColumn="NETWT" DataSetColumn="NETWT" />
+              <Mapping SourceColumn="DIAWT" DataSetColumn="DIAWT" />
+              <Mapping SourceColumn="STNWT" DataSetColumn="STNWT" />
+              <Mapping SourceColumn="DISCOUNT" DataSetColumn="DISCOUNT" />
+              <Mapping SourceColumn="TAX" DataSetColumn="TAX" />
+              <Mapping SourceColumn="AMOUNT" DataSetColumn="AMOUNT" />
+              <Mapping SourceColumn="DMDPCS" DataSetColumn="DMDPCS" />
+              <Mapping SourceColumn="STNPCS" DataSetColumn="STNPCS" />
+              <Mapping SourceColumn="CRATE" DataSetColumn="CRATE" />
+              <Mapping SourceColumn="PROMOCODE" DataSetColumn="PROMOCODE" />
+              <Mapping SourceColumn="UOM" DataSetColumn="UOM" />
+              <Mapping SourceColumn="SALESMAN" DataSetColumn="SALESMAN" />
+              <Mapping SourceColumn="MAKINGAMOUNT" DataSetColumn="MAKINGAMOUNT" />
+              <Mapping SourceColumn="HSNCODETABLE_IN" DataSetColumn="HSNCODETABLE_IN" />
+              <Mapping SourceColumn="CertificationNo" DataSetColumn="CertificationNo" />
+              <Mapping SourceColumn="DiaStAmt" DataSetColumn="DiaStAmt" />
+              <Mapping SourceColumn="MAKINGRATE" DataSetColumn="MAKINGRATE1" />
+              <Mapping SourceColumn="AfterDisMaking" DataSetColumn="AfterDisMaking1" />
+              <Mapping SourceColumn="TRANSACTIONID" DataSetColumn="TRANSACTIONID" />
+              <Mapping SourceColumn="LINENUM" DataSetColumn="LINENUM" />
+              <Mapping SourceColumn="REFLINENUM" DataSetColumn="REFLINENUM" />
+              <Mapping SourceColumn="IsRepairItem" DataSetColumn="IsRepairItem" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SubTotalTableAdapter" GeneratorDataComponentClassName="SubTotalTableAdapter" Name="SubTotal" UserDataComponentName="SubTotalTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AGPLPOSConnectionString (Settings)" DbObjectName="AGPLPOS.dbo.RETAILTRANSACTIONTABLE" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT '' AS NETAMOUNT,
+            '' AS GROSSAMOUNT
+            ,  PAYMENTAMOUNT , '' DISCAMOUNT,
+            ''  PaymentDiffAmt
+            FROM RETAILTRANSACTIONTABLE WHERE TRANSACTIONID=@TRANSACTIONID</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="TRANSACTIONID" ColumnName="TRANSACTIONID" DataSourceName="POS8420.dbo.RETAILTRANSACTIONTABLE" DataTypeServer="nvarchar(44)" DbType="String" Direction="Input" ParameterName="@TRANSACTIONID" Precision="0" ProviderType="NVarChar" Scale="0" Size="44" SourceColumn="TRANSACTIONID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NETAMOUNT" DataSetColumn="NETAMOUNT" />
+              <Mapping SourceColumn="GROSSAMOUNT" DataSetColumn="GROSSAMOUNT" />
+              <Mapping SourceColumn="DISCAMOUNT" DataSetColumn="DISCAMOUNT" />
+              <Mapping SourceColumn="PaymentDiffAmt" DataSetColumn="PaymentDiffAmt" />
+              <Mapping SourceColumn="PAYMENTAMOUNT" DataSetColumn="PAYMENTAMOUNT" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TenderTableAdapter" GeneratorDataComponentClassName="TenderTableAdapter" Name="Tender" UserDataComponentName="TenderTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AGPLPOSConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT '' NAME, '' TENDERTYPE,''  AMOUNT,'' CARDNO
+                                FROM RETAILTRANSACTIONPAYMENTTRANS where TRANSACTIONID=@TRANSACTIONID</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="TRANSACTIONID" ColumnName="TRANSACTIONID" DataSourceName="POS8420.dbo.RETAILTRANSACTIONPAYMENTTRANS" DataTypeServer="nvarchar(44)" DbType="String" Direction="Input" ParameterName="@TRANSACTIONID" Precision="0" ProviderType="NVarChar" Scale="0" Size="44" SourceColumn="TRANSACTIONID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NAME" DataSetColumn="NAME" />
+              <Mapping SourceColumn="TENDERTYPE" DataSetColumn="TENDERTYPE" />
+              <Mapping SourceColumn="AMOUNT" DataSetColumn="AMOUNT" />
+              <Mapping SourceColumn="CARDNO" DataSetColumn="CARDNO" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PaymentInfoTableAdapter" GeneratorDataComponentClassName="PaymentInfoTableAdapter" Name="PaymentInfo" UserDataComponentName="PaymentInfoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AGPLPOSConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT  '' PAYINFO, '' TYPE, '' INFOCODEID,'' PARENTLINENUM,'' TRANSACTIONID
+                               ,sum(AMOUNT) as AMOUNT
+                                FROM [dbo].[RETAILTRANSACTIONINFOCODETRANS] where TRANSACTIONID=@TRANSACTIONID</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="TRANSACTIONID" DataSourceName="" DataTypeServer="nvarchar(44)" DbType="String" Direction="Input" ParameterName="@TRANSACTIONID" Precision="0" Scale="0" Size="44" SourceColumn="TRANSACTIONID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TYPE" DataSetColumn="TYPE" />
+              <Mapping SourceColumn="INFOCODEID" DataSetColumn="INFOCODEID" />
+              <Mapping SourceColumn="PARENTLINENUM" DataSetColumn="PARENTLINENUM" />
+              <Mapping SourceColumn="TRANSACTIONID" DataSetColumn="TRANSACTIONID" />
+              <Mapping SourceColumn="PAYINFO" DataSetColumn="PAYINFO" />
+              <Mapping SourceColumn="AMOUNT" DataSetColumn="AMOUNT" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="StdRateTableAdapter" GeneratorDataComponentClassName="StdRateTableAdapter" Name="StdRate" UserDataComponentName="StdRateTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AGPLPOSConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText> SELECT TOP 1 '' AS STDGOLDRATE,
+                                 (SELECT DEFAULTCONFIGIDGOLD FROM RETAILPARAMETERS WHERE DATAAREAID = @DATAAREAID) AS BASECONFIG 
+                                 FROM METALRATES WHERE INVENTLOCATIONID= @INVENTLOCATIONID AND METALTYPE=1 AND RETAIL=1 AND RATETYPE = 3
+                        AND ACTIVE=1</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="INVENTLOCATIONID" ColumnName="INVENTLOCATIONID" DataSourceName="POS8420.dbo.METALRATES" DataTypeServer="nvarchar(10)" DbType="String" Direction="Input" ParameterName="@INVENTLOCATIONID" Precision="0" ProviderType="NVarChar" Scale="0" Size="10" SourceColumn="INVENTLOCATIONID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DATAAREAID" ColumnName="DATAAREAID" DataSourceName="POS8420.dbo.METALRATES" DataTypeServer="nvarchar(4)" DbType="String" Direction="Input" ParameterName="@DATAAREAID" Precision="0" ProviderType="NVarChar" Scale="0" Size="4" SourceColumn="DATAAREAID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="STDGOLDRATE" DataSetColumn="STDGOLDRATE" />
+              <Mapping SourceColumn="BASECONFIG" DataSetColumn="BASECONFIG" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TaxInfoTableAdapter" GeneratorDataComponentClassName="TaxInfoTableAdapter" Name="TaxInfo" UserDataComponentName="TaxInfoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AGPLPOSConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>		select '' TINVAT, '' TINCST from INVENTLOCATION where INVENTLOCATIONID =@INVENTLOCATIONID </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="INVENTLOCATIONID" ColumnName="INVENTLOCATIONID" DataSourceName="POS8420.dbo.INVENTLOCATION" DataTypeServer="nvarchar(10)" DbType="String" Direction="Input" ParameterName="@INVENTLOCATIONID" Precision="0" ProviderType="NVarChar" Scale="0" Size="10" SourceColumn="INVENTLOCATIONID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TINVAT" DataSetColumn="TINVAT" />
+              <Mapping SourceColumn="TINCST" DataSetColumn="TINCST" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TaxInDetailsTableAdapter" GeneratorDataComponentClassName="TaxInDetailsTableAdapter" Name="TaxInDetails" UserDataComponentName="TaxInDetailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AGPLPOSConnectionString (Settings)" DbObjectName="AGPLPOS.dbo.RETAILTRANSACTIONTAXTRANS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select TAXCODE,ABS(CAST(ISNULL(sum(Amount),0)AS DECIMAL(18,2)))AS TAX 
+from RETAILTRANSACTIONTAXTRANS A
+join RETAILTRANSACTIONSALESTRANS B 
+on A.TRANSACTIONID =B.TRANSACTIONID and A.SALELINENUM =B.LINENUM 
+and B.TRANSACTIONSTATUS =0
+where A.TRANSACTIONID =@TRANSACTIONID
+group by A.TRANSACTIONID,A.TERMINALID,STOREID ,taxcode</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="TRANSACTIONID" ColumnName="TRANSACTIONID" DataSourceName="POS8420.dbo.RETAILTRANSACTIONTAXTRANS" DataTypeServer="nvarchar(44)" DbType="String" Direction="Input" ParameterName="@TRANSACTIONID" Precision="0" ProviderType="NVarChar" Scale="0" Size="44" SourceColumn="TRANSACTIONID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TAXCODE" DataSetColumn="TAXCODE" />
+              <Mapping SourceColumn="TAX" DataSetColumn="TAX" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BCITableAdapter" GeneratorDataComponentClassName="BCITableAdapter" Name="BCI" UserDataComponentName="BCITableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AGPLPOSConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>select '' Id, '' as BarcodeImg</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="BarcodeImg" DataSetColumn="BarcodeImg" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MRTableAdapter" GeneratorDataComponentClassName="MRTableAdapter" Name="MR" UserDataComponentName="MRTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AGPLPOSConnectionString (Settings)" DbObjectName="AGPLPOS.dbo.GETMETALRATES" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.GETMETALRATES</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@StoreID" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="InputOutput" ParameterName="@P_EXECSTATUS" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="RATES" DataSetColumn="RATES" />
+              <Mapping SourceColumn="RATETYPE" DataSetColumn="RATETYPE" />
+              <Mapping SourceColumn="CONFIGIDSTANDARD" DataSetColumn="CONFIGIDSTANDARD" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TaxAdjust" GeneratorDataComponentClassName="TaxAdjust" Name="TaxAdjust" UserDataComponentName="TaxAdjust">
+            <MainSource>
+              <DbSource ConnectionRef="AGPLPOSConnectionString (Settings)" DbObjectName="AGPLPOS.dbo.TAX_ADJUSTMENT_INVOICE" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.TAX_ADJUSTMENT_INVOICE</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@TRANSID" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@TerminalID" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@LANGUAGEID" Precision="0" ProviderType="NVarChar" Scale="0" Size="10" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="InputOutput" ParameterName="@P_EXECSTATUS" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SKUNUMBER" DataSetColumn="SKUNUMBER" />
+              <Mapping SourceColumn="ITEMDESC" DataSetColumn="ITEMDESC" />
+              <Mapping SourceColumn="QTY" DataSetColumn="QTY" />
+              <Mapping SourceColumn="PRICE" DataSetColumn="PRICE" />
+              <Mapping SourceColumn="GROSSWT" DataSetColumn="GROSSWT" />
+              <Mapping SourceColumn="NETWT" DataSetColumn="NETWT" />
+              <Mapping SourceColumn="DIAWT" DataSetColumn="DIAWT" />
+              <Mapping SourceColumn="STNWT" DataSetColumn="STNWT" />
+              <Mapping SourceColumn="DISCOUNT" DataSetColumn="DISCOUNT" />
+              <Mapping SourceColumn="TAX" DataSetColumn="TAX" />
+              <Mapping SourceColumn="AMOUNT" DataSetColumn="AMOUNT" />
+              <Mapping SourceColumn="CONFIGID" DataSetColumn="CONFIGID" />
+              <Mapping SourceColumn="INVENTBATCHID" DataSetColumn="INVENTBATCHID" />
+              <Mapping SourceColumn="CRATE" DataSetColumn="CRATE" />
+              <Mapping SourceColumn="transactiontype" DataSetColumn="transactiontype" />
+              <Mapping SourceColumn="LINENUM" DataSetColumn="LINENUM" />
+              <Mapping SourceColumn="RETURNLINENUM" DataSetColumn="RETURNLINENUM" />
+              <Mapping SourceColumn="TAXVALUE" DataSetColumn="TAXVALUE" />
+              <Mapping SourceColumn="ISADJUSTMENT" DataSetColumn="ISADJUSTMENT" />
+              <Mapping SourceColumn="GrossSale" DataSetColumn="GrossSale" />
+              <Mapping SourceColumn="ADVANCEADJUSTMENTID" DataSetColumn="ADVANCEADJUSTMENTID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GSTTAXTableAdapter" GeneratorDataComponentClassName="GSTTAXTableAdapter" Name="GSTTAX" UserDataComponentName="GSTTAXTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AGPLPOSConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT '' HSNCODE,'' CTAXCODE,0 CTAMT,0 CTRATE,'' STAXCODE,0 STAMT,0 STRATE,'' ITAXCODE,0 ITAMT,0 ITRATE,'' CESS,0 CESSCODE,0 CESSRATE</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="HSNCODE" DataSetColumn="HSNCODE" />
+              <Mapping SourceColumn="CTAXCODE" DataSetColumn="CTAXCODE" />
+              <Mapping SourceColumn="CTAMT" DataSetColumn="CTAMT" />
+              <Mapping SourceColumn="CTRATE" DataSetColumn="CTRATE" />
+              <Mapping SourceColumn="STAXCODE" DataSetColumn="STAXCODE" />
+              <Mapping SourceColumn="STAMT" DataSetColumn="STAMT" />
+              <Mapping SourceColumn="STRATE" DataSetColumn="STRATE" />
+              <Mapping SourceColumn="ITAXCODE" DataSetColumn="ITAXCODE" />
+              <Mapping SourceColumn="ITAMT" DataSetColumn="ITAMT" />
+              <Mapping SourceColumn="ITRATE" DataSetColumn="ITRATE" />
+              <Mapping SourceColumn="CESS" DataSetColumn="CESS" />
+              <Mapping SourceColumn="CESSCODE" DataSetColumn="CESSCODE" />
+              <Mapping SourceColumn="CESSRATE" DataSetColumn="CESSRATE" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSSalesInvoice" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSSalesInvoice" msprop:Generator_UserDSName="DSSalesInvoice">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Detail" msprop:Generator_TableClassName="DetailDataTable" msprop:Generator_TableVarName="tableDetail" msprop:Generator_RowChangedName="DetailRowChanged" msprop:Generator_TablePropName="Detail" msprop:Generator_RowDeletingName="DetailRowDeleting" msprop:Generator_RowChangingName="DetailRowChanging" msprop:Generator_RowEvHandlerName="DetailRowChangeEventHandler" msprop:Generator_RowDeletedName="DetailRowDeleted" msprop:Generator_RowClassName="DetailRow" msprop:Generator_UserTableName="Detail" msprop:Generator_RowEvArgName="DetailRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SKUNUMBER" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSKUNUMBER" msprop:Generator_ColumnPropNameInRow="SKUNUMBER" msprop:Generator_ColumnPropNameInTable="SKUNUMBERColumn" msprop:Generator_UserColumnName="SKUNUMBER" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ITEMDESC" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnITEMDESC" msprop:Generator_ColumnPropNameInRow="ITEMDESC" msprop:Generator_ColumnPropNameInTable="ITEMDESCColumn" msprop:Generator_UserColumnName="ITEMDESC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CONFIGID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCONFIGID" msprop:Generator_ColumnPropNameInRow="CONFIGID" msprop:Generator_ColumnPropNameInTable="CONFIGIDColumn" msprop:Generator_UserColumnName="CONFIGID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QTY" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnQTY" msprop:Generator_ColumnPropNameInRow="QTY" msprop:Generator_ColumnPropNameInTable="QTYColumn" msprop:Generator_UserColumnName="QTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PRICE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPRICE" msprop:Generator_ColumnPropNameInRow="PRICE" msprop:Generator_ColumnPropNameInTable="PRICEColumn" msprop:Generator_UserColumnName="PRICE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GROSSWT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnGROSSWT" msprop:Generator_ColumnPropNameInRow="GROSSWT" msprop:Generator_ColumnPropNameInTable="GROSSWTColumn" msprop:Generator_UserColumnName="GROSSWT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NETWT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNETWT" msprop:Generator_ColumnPropNameInRow="NETWT" msprop:Generator_ColumnPropNameInTable="NETWTColumn" msprop:Generator_UserColumnName="NETWT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DIAWT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDIAWT" msprop:Generator_ColumnPropNameInRow="DIAWT" msprop:Generator_ColumnPropNameInTable="DIAWTColumn" msprop:Generator_UserColumnName="DIAWT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="STNWT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSTNWT" msprop:Generator_ColumnPropNameInRow="STNWT" msprop:Generator_ColumnPropNameInTable="STNWTColumn" msprop:Generator_UserColumnName="STNWT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DISCOUNT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDISCOUNT" msprop:Generator_ColumnPropNameInRow="DISCOUNT" msprop:Generator_ColumnPropNameInTable="DISCOUNTColumn" msprop:Generator_UserColumnName="DISCOUNT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TAX" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTAX" msprop:Generator_ColumnPropNameInRow="TAX" msprop:Generator_ColumnPropNameInTable="TAXColumn" msprop:Generator_UserColumnName="TAX" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AMOUNT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAMOUNT" msprop:Generator_ColumnPropNameInRow="AMOUNT" msprop:Generator_ColumnPropNameInTable="AMOUNTColumn" msprop:Generator_UserColumnName="AMOUNT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DMDPCS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDMDPCS" msprop:Generator_ColumnPropNameInRow="DMDPCS" msprop:Generator_ColumnPropNameInTable="DMDPCSColumn" msprop:Generator_UserColumnName="DMDPCS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="STNPCS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSTNPCS" msprop:Generator_ColumnPropNameInRow="STNPCS" msprop:Generator_ColumnPropNameInTable="STNPCSColumn" msprop:Generator_UserColumnName="STNPCS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CRATE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCRATE" msprop:Generator_ColumnPropNameInRow="CRATE" msprop:Generator_ColumnPropNameInTable="CRATEColumn" msprop:Generator_UserColumnName="CRATE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PROMOCODE" msprop:Generator_ColumnVarNameInTable="columnPROMOCODE" msprop:Generator_ColumnPropNameInRow="PROMOCODE" msprop:Generator_ColumnPropNameInTable="PROMOCODEColumn" msprop:Generator_UserColumnName="PROMOCODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UOM" msprop:Generator_ColumnVarNameInTable="columnUOM" msprop:Generator_ColumnPropNameInRow="UOM" msprop:Generator_ColumnPropNameInTable="UOMColumn" msprop:Generator_UserColumnName="UOM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SALESMAN" msprop:Generator_ColumnVarNameInTable="columnSALESMAN" msprop:Generator_ColumnPropNameInRow="SALESMAN" msprop:Generator_ColumnPropNameInTable="SALESMANColumn" msprop:Generator_UserColumnName="SALESMAN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MAKINGAMOUNT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMAKINGAMOUNT" msprop:Generator_ColumnPropNameInRow="MAKINGAMOUNT" msprop:Generator_ColumnPropNameInTable="MAKINGAMOUNTColumn" msprop:Generator_UserColumnName="MAKINGAMOUNT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="HSNCODETABLE_IN" msprop:Generator_ColumnVarNameInTable="columnHSNCODETABLE_IN" msprop:Generator_ColumnPropNameInRow="HSNCODETABLE_IN" msprop:Generator_ColumnPropNameInTable="HSNCODETABLE_INColumn" msprop:Generator_UserColumnName="HSNCODETABLE_IN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CertificationNo" msprop:Generator_ColumnVarNameInTable="columnCertificationNo" msprop:Generator_ColumnPropNameInRow="CertificationNo" msprop:Generator_ColumnPropNameInTable="CertificationNoColumn" msprop:Generator_UserColumnName="CertificationNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MAKINGRATE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMAKINGRATE" msprop:Generator_ColumnPropNameInRow="MAKINGRATE" msprop:Generator_ColumnPropNameInTable="MAKINGRATEColumn" msprop:Generator_UserColumnName="MAKINGRATE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DiaStAmt" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDiaStAmt" msprop:Generator_ColumnPropNameInRow="DiaStAmt" msprop:Generator_ColumnPropNameInTable="DiaStAmtColumn" msprop:Generator_UserColumnName="DiaStAmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MAKINGRATE1" msdata:ReadOnly="true" msdata:Caption="MAKINGRATE" msprop:Generator_ColumnVarNameInTable="columnMAKINGRATE1" msprop:Generator_ColumnPropNameInRow="MAKINGRATE1" msprop:Generator_ColumnPropNameInTable="MAKINGRATE1Column" msprop:Generator_UserColumnName="MAKINGRATE1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="47" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AfterDisMaking" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAfterDisMaking" msprop:Generator_ColumnPropNameInRow="AfterDisMaking" msprop:Generator_ColumnPropNameInTable="AfterDisMakingColumn" msprop:Generator_UserColumnName="AfterDisMaking" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AfterDisMaking1" msdata:ReadOnly="true" msdata:Caption="AfterDisMaking" msprop:Generator_ColumnVarNameInTable="columnAfterDisMaking1" msprop:Generator_ColumnPropNameInRow="AfterDisMaking1" msprop:Generator_ColumnPropNameInTable="AfterDisMaking1Column" msprop:Generator_UserColumnName="AfterDisMaking1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="42" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TRANSACTIONID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTRANSACTIONID" msprop:Generator_ColumnPropNameInRow="TRANSACTIONID" msprop:Generator_ColumnPropNameInTable="TRANSACTIONIDColumn" msprop:Generator_UserColumnName="TRANSACTIONID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="44" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LINENUM" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLINENUM" msprop:Generator_ColumnPropNameInRow="LINENUM" msprop:Generator_ColumnPropNameInTable="LINENUMColumn" msprop:Generator_UserColumnName="LINENUM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="REFLINENUM" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnREFLINENUM" msprop:Generator_ColumnPropNameInRow="REFLINENUM" msprop:Generator_ColumnPropNameInTable="REFLINENUMColumn" msprop:Generator_UserColumnName="REFLINENUM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IsRepairItem" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnIsRepairItem" msprop:Generator_ColumnPropNameInRow="IsRepairItem" msprop:Generator_ColumnPropNameInTable="IsRepairItemColumn" msprop:Generator_UserColumnName="IsRepairItem" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SubTotal" msprop:Generator_TableClassName="SubTotalDataTable" msprop:Generator_TableVarName="tableSubTotal" msprop:Generator_RowChangedName="SubTotalRowChanged" msprop:Generator_TablePropName="SubTotal" msprop:Generator_RowDeletingName="SubTotalRowDeleting" msprop:Generator_RowChangingName="SubTotalRowChanging" msprop:Generator_RowEvHandlerName="SubTotalRowChangeEventHandler" msprop:Generator_RowDeletedName="SubTotalRowDeleted" msprop:Generator_RowClassName="SubTotalRow" msprop:Generator_UserTableName="SubTotal" msprop:Generator_RowEvArgName="SubTotalRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NETAMOUNT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNETAMOUNT" msprop:Generator_ColumnPropNameInRow="NETAMOUNT" msprop:Generator_ColumnPropNameInTable="NETAMOUNTColumn" msprop:Generator_UserColumnName="NETAMOUNT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GROSSAMOUNT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnGROSSAMOUNT" msprop:Generator_ColumnPropNameInRow="GROSSAMOUNT" msprop:Generator_ColumnPropNameInTable="GROSSAMOUNTColumn" msprop:Generator_UserColumnName="GROSSAMOUNT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DISCAMOUNT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDISCAMOUNT" msprop:Generator_ColumnPropNameInRow="DISCAMOUNT" msprop:Generator_ColumnPropNameInTable="DISCAMOUNTColumn" msprop:Generator_UserColumnName="DISCAMOUNT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PaymentDiffAmt" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPaymentDiffAmt" msprop:Generator_ColumnPropNameInRow="PaymentDiffAmt" msprop:Generator_ColumnPropNameInTable="PaymentDiffAmtColumn" msprop:Generator_UserColumnName="PaymentDiffAmt" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PAYMENTAMOUNT" msprop:Generator_ColumnVarNameInTable="columnPAYMENTAMOUNT" msprop:Generator_ColumnPropNameInRow="PAYMENTAMOUNT" msprop:Generator_ColumnPropNameInTable="PAYMENTAMOUNTColumn" msprop:Generator_UserColumnName="PAYMENTAMOUNT" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Tender" msprop:Generator_TableClassName="TenderDataTable" msprop:Generator_TableVarName="tableTender" msprop:Generator_RowChangedName="TenderRowChanged" msprop:Generator_TablePropName="Tender" msprop:Generator_RowDeletingName="TenderRowDeleting" msprop:Generator_RowChangingName="TenderRowChanging" msprop:Generator_RowEvHandlerName="TenderRowChangeEventHandler" msprop:Generator_RowDeletedName="TenderRowDeleted" msprop:Generator_RowClassName="TenderRow" msprop:Generator_UserTableName="Tender" msprop:Generator_RowEvArgName="TenderRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NAME" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNAME" msprop:Generator_ColumnPropNameInRow="NAME" msprop:Generator_ColumnPropNameInTable="NAMEColumn" msprop:Generator_UserColumnName="NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TENDERTYPE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTENDERTYPE" msprop:Generator_ColumnPropNameInRow="TENDERTYPE" msprop:Generator_ColumnPropNameInTable="TENDERTYPEColumn" msprop:Generator_UserColumnName="TENDERTYPE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AMOUNT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAMOUNT" msprop:Generator_ColumnPropNameInRow="AMOUNT" msprop:Generator_ColumnPropNameInTable="AMOUNTColumn" msprop:Generator_UserColumnName="AMOUNT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CARDNO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCARDNO" msprop:Generator_ColumnPropNameInRow="CARDNO" msprop:Generator_ColumnPropNameInTable="CARDNOColumn" msprop:Generator_UserColumnName="CARDNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PaymentInfo" msprop:Generator_TableClassName="PaymentInfoDataTable" msprop:Generator_TableVarName="tablePaymentInfo" msprop:Generator_RowChangedName="PaymentInfoRowChanged" msprop:Generator_TablePropName="PaymentInfo" msprop:Generator_RowDeletingName="PaymentInfoRowDeleting" msprop:Generator_RowChangingName="PaymentInfoRowChanging" msprop:Generator_RowEvHandlerName="PaymentInfoRowChangeEventHandler" msprop:Generator_RowDeletedName="PaymentInfoRowDeleted" msprop:Generator_RowClassName="PaymentInfoRow" msprop:Generator_UserTableName="PaymentInfo" msprop:Generator_RowEvArgName="PaymentInfoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TYPE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTYPE" msprop:Generator_ColumnPropNameInRow="TYPE" msprop:Generator_ColumnPropNameInTable="TYPEColumn" msprop:Generator_UserColumnName="TYPE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INFOCODEID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnINFOCODEID" msprop:Generator_ColumnPropNameInRow="INFOCODEID" msprop:Generator_ColumnPropNameInTable="INFOCODEIDColumn" msprop:Generator_UserColumnName="INFOCODEID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARENTLINENUM" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPARENTLINENUM" msprop:Generator_ColumnPropNameInRow="PARENTLINENUM" msprop:Generator_ColumnPropNameInTable="PARENTLINENUMColumn" msprop:Generator_UserColumnName="PARENTLINENUM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TRANSACTIONID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTRANSACTIONID" msprop:Generator_ColumnPropNameInRow="TRANSACTIONID" msprop:Generator_ColumnPropNameInTable="TRANSACTIONIDColumn" msprop:Generator_UserColumnName="TRANSACTIONID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PAYINFO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPAYINFO" msprop:Generator_ColumnPropNameInRow="PAYINFO" msprop:Generator_ColumnPropNameInTable="PAYINFOColumn" msprop:Generator_UserColumnName="PAYINFO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AMOUNT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAMOUNT" msprop:Generator_ColumnPropNameInRow="AMOUNT" msprop:Generator_ColumnPropNameInTable="AMOUNTColumn" msprop:Generator_UserColumnName="AMOUNT" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="StdRate" msprop:Generator_TableClassName="StdRateDataTable" msprop:Generator_TableVarName="tableStdRate" msprop:Generator_RowChangedName="StdRateRowChanged" msprop:Generator_TablePropName="StdRate" msprop:Generator_RowDeletingName="StdRateRowDeleting" msprop:Generator_RowChangingName="StdRateRowChanging" msprop:Generator_RowEvHandlerName="StdRateRowChangeEventHandler" msprop:Generator_RowDeletedName="StdRateRowDeleted" msprop:Generator_RowClassName="StdRateRow" msprop:Generator_UserTableName="StdRate" msprop:Generator_RowEvArgName="StdRateRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="STDGOLDRATE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSTDGOLDRATE" msprop:Generator_ColumnPropNameInRow="STDGOLDRATE" msprop:Generator_ColumnPropNameInTable="STDGOLDRATEColumn" msprop:Generator_UserColumnName="STDGOLDRATE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BASECONFIG" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBASECONFIG" msprop:Generator_ColumnPropNameInRow="BASECONFIG" msprop:Generator_ColumnPropNameInTable="BASECONFIGColumn" msprop:Generator_UserColumnName="BASECONFIG" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TaxInfo" msprop:Generator_TableClassName="TaxInfoDataTable" msprop:Generator_TableVarName="tableTaxInfo" msprop:Generator_RowChangedName="TaxInfoRowChanged" msprop:Generator_TablePropName="TaxInfo" msprop:Generator_RowDeletingName="TaxInfoRowDeleting" msprop:Generator_RowChangingName="TaxInfoRowChanging" msprop:Generator_RowEvHandlerName="TaxInfoRowChangeEventHandler" msprop:Generator_RowDeletedName="TaxInfoRowDeleted" msprop:Generator_RowClassName="TaxInfoRow" msprop:Generator_UserTableName="TaxInfo" msprop:Generator_RowEvArgName="TaxInfoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TINVAT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTINVAT" msprop:Generator_ColumnPropNameInRow="TINVAT" msprop:Generator_ColumnPropNameInTable="TINVATColumn" msprop:Generator_UserColumnName="TINVAT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TINCST" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTINCST" msprop:Generator_ColumnPropNameInRow="TINCST" msprop:Generator_ColumnPropNameInTable="TINCSTColumn" msprop:Generator_UserColumnName="TINCST" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TaxInDetails" msprop:Generator_TableClassName="TaxInDetailsDataTable" msprop:Generator_TableVarName="tableTaxInDetails" msprop:Generator_RowChangedName="TaxInDetailsRowChanged" msprop:Generator_TablePropName="TaxInDetails" msprop:Generator_RowDeletingName="TaxInDetailsRowDeleting" msprop:Generator_RowChangingName="TaxInDetailsRowChanging" msprop:Generator_RowEvHandlerName="TaxInDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="TaxInDetailsRowDeleted" msprop:Generator_RowClassName="TaxInDetailsRow" msprop:Generator_UserTableName="TaxInDetails" msprop:Generator_RowEvArgName="TaxInDetailsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TAXCODE" msprop:Generator_ColumnVarNameInTable="columnTAXCODE" msprop:Generator_ColumnPropNameInRow="TAXCODE" msprop:Generator_ColumnPropNameInTable="TAXCODEColumn" msprop:Generator_UserColumnName="TAXCODE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TAX" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTAX" msprop:Generator_ColumnPropNameInRow="TAX" msprop:Generator_ColumnPropNameInTable="TAXColumn" msprop:Generator_UserColumnName="TAX" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BCI" msprop:Generator_TableClassName="BCIDataTable" msprop:Generator_TableVarName="tableBCI" msprop:Generator_TablePropName="BCI" msprop:Generator_RowDeletingName="BCIRowDeleting" msprop:Generator_RowChangingName="BCIRowChanging" msprop:Generator_RowEvHandlerName="BCIRowChangeEventHandler" msprop:Generator_RowDeletedName="BCIRowDeleted" msprop:Generator_UserTableName="BCI" msprop:Generator_RowChangedName="BCIRowChanged" msprop:Generator_RowEvArgName="BCIRowChangeEvent" msprop:Generator_RowClassName="BCIRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BarcodeImg" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBarcodeImg" msprop:Generator_ColumnPropNameInRow="BarcodeImg" msprop:Generator_ColumnPropNameInTable="BarcodeImgColumn" msprop:Generator_UserColumnName="BarcodeImg" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MR" msprop:Generator_TableClassName="MRDataTable" msprop:Generator_TableVarName="tableMR" msprop:Generator_RowChangedName="MRRowChanged" msprop:Generator_TablePropName="MR" msprop:Generator_RowDeletingName="MRRowDeleting" msprop:Generator_RowChangingName="MRRowChanging" msprop:Generator_RowEvHandlerName="MRRowChangeEventHandler" msprop:Generator_RowDeletedName="MRRowDeleted" msprop:Generator_RowClassName="MRRow" msprop:Generator_UserTableName="MR" msprop:Generator_RowEvArgName="MRRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RATES" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRATES" msprop:Generator_ColumnPropNameInRow="RATES" msprop:Generator_ColumnPropNameInTable="RATESColumn" msprop:Generator_UserColumnName="RATES" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RATETYPE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRATETYPE" msprop:Generator_ColumnPropNameInRow="RATETYPE" msprop:Generator_ColumnPropNameInTable="RATETYPEColumn" msprop:Generator_UserColumnName="RATETYPE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CONFIGIDSTANDARD" msprop:Generator_ColumnVarNameInTable="columnCONFIGIDSTANDARD" msprop:Generator_ColumnPropNameInRow="CONFIGIDSTANDARD" msprop:Generator_ColumnPropNameInTable="CONFIGIDSTANDARDColumn" msprop:Generator_UserColumnName="CONFIGIDSTANDARD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtGroupTotal" msprop:Generator_TableClassName="dtGroupTotalDataTable" msprop:Generator_TableVarName="tabledtGroupTotal" msprop:Generator_TablePropName="dtGroupTotal" msprop:Generator_RowDeletingName="dtGroupTotalRowDeleting" msprop:Generator_RowChangingName="dtGroupTotalRowChanging" msprop:Generator_RowEvHandlerName="dtGroupTotalRowChangeEventHandler" msprop:Generator_RowDeletedName="dtGroupTotalRowDeleted" msprop:Generator_UserTableName="dtGroupTotal" msprop:Generator_RowChangedName="dtGroupTotalRowChanged" msprop:Generator_RowEvArgName="dtGroupTotalRowChangeEvent" msprop:Generator_RowClassName="dtGroupTotalRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:string" minOccurs="0" />
+              <xs:element name="TotQty" msprop:Generator_ColumnVarNameInTable="columnTotQty" msprop:Generator_ColumnPropNameInRow="TotQty" msprop:Generator_ColumnPropNameInTable="TotQtyColumn" msprop:Generator_UserColumnName="TotQty" type="xs:string" minOccurs="0" />
+              <xs:element name="TotGROSSWT" msprop:Generator_ColumnVarNameInTable="columnTotGROSSWT" msprop:Generator_ColumnPropNameInRow="TotGROSSWT" msprop:Generator_ColumnPropNameInTable="TotGROSSWTColumn" msprop:Generator_UserColumnName="TotGROSSWT" type="xs:string" minOccurs="0" />
+              <xs:element name="TotNetWt" msprop:Generator_ColumnVarNameInTable="columnTotNetWt" msprop:Generator_ColumnPropNameInRow="TotNetWt" msprop:Generator_ColumnPropNameInTable="TotNetWtColumn" msprop:Generator_UserColumnName="TotNetWt" type="xs:string" minOccurs="0" />
+              <xs:element name="TotGSale" msprop:Generator_ColumnVarNameInTable="columnTotGSale" msprop:Generator_ColumnPropNameInRow="TotGSale" msprop:Generator_ColumnPropNameInTable="TotGSaleColumn" msprop:Generator_UserColumnName="TotGSale" type="xs:string" minOccurs="0" />
+              <xs:element name="TotTax" msprop:Generator_ColumnVarNameInTable="columnTotTax" msprop:Generator_ColumnPropNameInRow="TotTax" msprop:Generator_ColumnPropNameInTable="TotTaxColumn" msprop:Generator_UserColumnName="TotTax" type="xs:string" minOccurs="0" />
+              <xs:element name="TotStnWt" msprop:Generator_ColumnVarNameInTable="columnTotStnWt" msprop:Generator_ColumnPropNameInRow="TotStnWt" msprop:Generator_ColumnPropNameInTable="TotStnWtColumn" msprop:Generator_UserColumnName="TotStnWt" type="xs:string" minOccurs="0" />
+              <xs:element name="TotMkAmt" msprop:Generator_ColumnVarNameInTable="columnTotMkAmt" msprop:Generator_ColumnPropNameInRow="TotMkAmt" msprop:Generator_ColumnPropNameInTable="TotMkAmtColumn" msprop:Generator_UserColumnName="TotMkAmt" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TaxAdjust" msprop:Generator_TableClassName="TaxAdjustDataTable" msprop:Generator_TableVarName="tableTaxAdjust" msprop:Generator_TablePropName="TaxAdjust" msprop:Generator_RowDeletingName="TaxAdjustRowDeleting" msprop:Generator_RowChangingName="TaxAdjustRowChanging" msprop:Generator_RowEvHandlerName="TaxAdjustRowChangeEventHandler" msprop:Generator_RowDeletedName="TaxAdjustRowDeleted" msprop:Generator_UserTableName="TaxAdjust" msprop:Generator_RowChangedName="TaxAdjustRowChanged" msprop:Generator_RowEvArgName="TaxAdjustRowChangeEvent" msprop:Generator_RowClassName="TaxAdjustRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SKUNUMBER" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSKUNUMBER" msprop:Generator_ColumnPropNameInRow="SKUNUMBER" msprop:Generator_ColumnPropNameInTable="SKUNUMBERColumn" msprop:Generator_UserColumnName="SKUNUMBER" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ITEMDESC" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnITEMDESC" msprop:Generator_ColumnPropNameInRow="ITEMDESC" msprop:Generator_ColumnPropNameInTable="ITEMDESCColumn" msprop:Generator_UserColumnName="ITEMDESC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1024" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QTY" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnQTY" msprop:Generator_ColumnPropNameInRow="QTY" msprop:Generator_ColumnPropNameInTable="QTYColumn" msprop:Generator_UserColumnName="QTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PRICE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPRICE" msprop:Generator_ColumnPropNameInRow="PRICE" msprop:Generator_ColumnPropNameInTable="PRICEColumn" msprop:Generator_UserColumnName="PRICE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GROSSWT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnGROSSWT" msprop:Generator_ColumnPropNameInRow="GROSSWT" msprop:Generator_ColumnPropNameInTable="GROSSWTColumn" msprop:Generator_UserColumnName="GROSSWT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NETWT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNETWT" msprop:Generator_ColumnPropNameInRow="NETWT" msprop:Generator_ColumnPropNameInTable="NETWTColumn" msprop:Generator_UserColumnName="NETWT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DIAWT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDIAWT" msprop:Generator_ColumnPropNameInRow="DIAWT" msprop:Generator_ColumnPropNameInTable="DIAWTColumn" msprop:Generator_UserColumnName="DIAWT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="STNWT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSTNWT" msprop:Generator_ColumnPropNameInRow="STNWT" msprop:Generator_ColumnPropNameInTable="STNWTColumn" msprop:Generator_UserColumnName="STNWT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DISCOUNT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDISCOUNT" msprop:Generator_ColumnPropNameInRow="DISCOUNT" msprop:Generator_ColumnPropNameInTable="DISCOUNTColumn" msprop:Generator_UserColumnName="DISCOUNT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TAX" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTAX" msprop:Generator_ColumnPropNameInRow="TAX" msprop:Generator_ColumnPropNameInTable="TAXColumn" msprop:Generator_UserColumnName="TAX" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AMOUNT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAMOUNT" msprop:Generator_ColumnPropNameInRow="AMOUNT" msprop:Generator_ColumnPropNameInTable="AMOUNTColumn" msprop:Generator_UserColumnName="AMOUNT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CONFIGID" msprop:Generator_ColumnVarNameInTable="columnCONFIGID" msprop:Generator_ColumnPropNameInRow="CONFIGID" msprop:Generator_ColumnPropNameInTable="CONFIGIDColumn" msprop:Generator_UserColumnName="CONFIGID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INVENTBATCHID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnINVENTBATCHID" msprop:Generator_ColumnPropNameInRow="INVENTBATCHID" msprop:Generator_ColumnPropNameInTable="INVENTBATCHIDColumn" msprop:Generator_UserColumnName="INVENTBATCHID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="23" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CRATE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCRATE" msprop:Generator_ColumnPropNameInRow="CRATE" msprop:Generator_ColumnPropNameInTable="CRATEColumn" msprop:Generator_UserColumnName="CRATE" type="xs:int" minOccurs="0" />
+              <xs:element name="transactiontype" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columntransactiontype" msprop:Generator_ColumnPropNameInRow="transactiontype" msprop:Generator_ColumnPropNameInTable="transactiontypeColumn" msprop:Generator_UserColumnName="transactiontype" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LINENUM" msprop:Generator_ColumnVarNameInTable="columnLINENUM" msprop:Generator_ColumnPropNameInRow="LINENUM" msprop:Generator_ColumnPropNameInTable="LINENUMColumn" msprop:Generator_UserColumnName="LINENUM" type="xs:decimal" />
+              <xs:element name="RETURNLINENUM" msprop:Generator_ColumnVarNameInTable="columnRETURNLINENUM" msprop:Generator_ColumnPropNameInRow="RETURNLINENUM" msprop:Generator_ColumnPropNameInTable="RETURNLINENUMColumn" msprop:Generator_UserColumnName="RETURNLINENUM" type="xs:decimal" />
+              <xs:element name="TAXVALUE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTAXVALUE" msprop:Generator_ColumnPropNameInRow="TAXVALUE" msprop:Generator_ColumnPropNameInTable="TAXVALUEColumn" msprop:Generator_UserColumnName="TAXVALUE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ISADJUSTMENT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnISADJUSTMENT" msprop:Generator_ColumnPropNameInRow="ISADJUSTMENT" msprop:Generator_ColumnPropNameInTable="ISADJUSTMENTColumn" msprop:Generator_UserColumnName="ISADJUSTMENT" type="xs:int" minOccurs="0" />
+              <xs:element name="GrossSale" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnGrossSale" msprop:Generator_ColumnPropNameInRow="GrossSale" msprop:Generator_ColumnPropNameInTable="GrossSaleColumn" msprop:Generator_UserColumnName="GrossSale" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ADVANCEADJUSTMENTID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnADVANCEADJUSTMENTID" msprop:Generator_ColumnPropNameInRow="ADVANCEADJUSTMENTID" msprop:Generator_ColumnPropNameInTable="ADVANCEADJUSTMENTIDColumn" msprop:Generator_UserColumnName="ADVANCEADJUSTMENTID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GSTTAX" msprop:Generator_TableClassName="GSTTAXDataTable" msprop:Generator_TableVarName="tableGSTTAX" msprop:Generator_RowChangedName="GSTTAXRowChanged" msprop:Generator_TablePropName="GSTTAX" msprop:Generator_RowDeletingName="GSTTAXRowDeleting" msprop:Generator_RowChangingName="GSTTAXRowChanging" msprop:Generator_RowEvHandlerName="GSTTAXRowChangeEventHandler" msprop:Generator_RowDeletedName="GSTTAXRowDeleted" msprop:Generator_RowClassName="GSTTAXRow" msprop:Generator_UserTableName="GSTTAX" msprop:Generator_RowEvArgName="GSTTAXRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HSNCODE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnHSNCODE" msprop:Generator_ColumnPropNameInRow="HSNCODE" msprop:Generator_ColumnPropNameInTable="HSNCODEColumn" msprop:Generator_UserColumnName="HSNCODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CTAXCODE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCTAXCODE" msprop:Generator_ColumnPropNameInRow="CTAXCODE" msprop:Generator_ColumnPropNameInTable="CTAXCODEColumn" msprop:Generator_UserColumnName="CTAXCODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CTAMT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCTAMT" msprop:Generator_ColumnPropNameInRow="CTAMT" msprop:Generator_ColumnPropNameInTable="CTAMTColumn" msprop:Generator_UserColumnName="CTAMT" type="xs:int" minOccurs="0" />
+              <xs:element name="CTRATE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCTRATE" msprop:Generator_ColumnPropNameInRow="CTRATE" msprop:Generator_ColumnPropNameInTable="CTRATEColumn" msprop:Generator_UserColumnName="CTRATE" type="xs:int" minOccurs="0" />
+              <xs:element name="STAXCODE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSTAXCODE" msprop:Generator_ColumnPropNameInRow="STAXCODE" msprop:Generator_ColumnPropNameInTable="STAXCODEColumn" msprop:Generator_UserColumnName="STAXCODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="STAMT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSTAMT" msprop:Generator_ColumnPropNameInRow="STAMT" msprop:Generator_ColumnPropNameInTable="STAMTColumn" msprop:Generator_UserColumnName="STAMT" type="xs:int" minOccurs="0" />
+              <xs:element name="STRATE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSTRATE" msprop:Generator_ColumnPropNameInRow="STRATE" msprop:Generator_ColumnPropNameInTable="STRATEColumn" msprop:Generator_UserColumnName="STRATE" type="xs:int" minOccurs="0" />
+              <xs:element name="ITAXCODE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnITAXCODE" msprop:Generator_ColumnPropNameInRow="ITAXCODE" msprop:Generator_ColumnPropNameInTable="ITAXCODEColumn" msprop:Generator_UserColumnName="ITAXCODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ITAMT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnITAMT" msprop:Generator_ColumnPropNameInRow="ITAMT" msprop:Generator_ColumnPropNameInTable="ITAMTColumn" msprop:Generator_UserColumnName="ITAMT" type="xs:int" minOccurs="0" />
+              <xs:element name="ITRATE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnITRATE" msprop:Generator_ColumnPropNameInRow="ITRATE" msprop:Generator_ColumnPropNameInTable="ITRATEColumn" msprop:Generator_UserColumnName="ITRATE" type="xs:int" minOccurs="0" />
+              <xs:element name="CESS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCESS" msprop:Generator_ColumnPropNameInRow="CESS" msprop:Generator_ColumnPropNameInTable="CESSColumn" msprop:Generator_UserColumnName="CESS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CESSCODE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCESSCODE" msprop:Generator_ColumnPropNameInRow="CESSCODE" msprop:Generator_ColumnPropNameInTable="CESSCODEColumn" msprop:Generator_UserColumnName="CESSCODE" type="xs:int" minOccurs="0" />
+              <xs:element name="CESSRATE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCESSRATE" msprop:Generator_ColumnPropNameInRow="CESSRATE" msprop:Generator_ColumnPropNameInTable="CESSRATEColumn" msprop:Generator_UserColumnName="CESSRATE" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

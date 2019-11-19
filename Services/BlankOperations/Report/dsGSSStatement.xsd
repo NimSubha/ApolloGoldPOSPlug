@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsGSSStatement" targetNamespace="http://tempuri.org/dsGSSStatement.xsd" xmlns:mstns="http://tempuri.org/dsGSSStatement.xsd" xmlns="http://tempuri.org/dsGSSStatement.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="POSANDHERIConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="POSANDHERIConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Microsoft.Dynamics.Retail.Pos.BlankOperations.Properties.Settings.GlobalReference.Default.POSANDHERIConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="POS4001ConnectionString5" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="POS4001ConnectionString5 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Microsoft.Dynamics.Retail.Pos.BlankOperations.Properties.Settings.GlobalReference.Default.POS4001ConnectionString5" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtGSSStatementTableAdapter" GeneratorDataComponentClassName="dtGSSStatementTableAdapter" Name="dtGSSStatement" UserDataComponentName="dtGSSStatementTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="POS4001ConnectionString5 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select '' as MonthsofYear, 0 Days, '' as PaymentMode,'' OpeningDate, '' as Duedate,'' as Transdate,0 as NoOfDaysOfLatePay,0 as Accumulated_Skipped_Days,'' as Maturity_Date, '' as TransactionId, 0.00 as Metal_Rate,0.000 as GoldQuantity,0.00 Amount, 0.00 TaxAmount,0.00  AmtExclTax from GSSACCOUNTOPENINGPOSTED </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MonthsofYear" DataSetColumn="MonthsofYear" />
+              <Mapping SourceColumn="PaymentMode" DataSetColumn="PaymentMode" />
+              <Mapping SourceColumn="Duedate" DataSetColumn="Duedate" />
+              <Mapping SourceColumn="Transdate" DataSetColumn="Transdate" />
+              <Mapping SourceColumn="TransactionId" DataSetColumn="TransactionId" />
+              <Mapping SourceColumn="OpeningDate" DataSetColumn="OpeningDate" />
+              <Mapping SourceColumn="Maturity_Date" DataSetColumn="Maturity_Date" />
+              <Mapping SourceColumn="Days" DataSetColumn="Days" />
+              <Mapping SourceColumn="NoOfDaysOfLatePay" DataSetColumn="NoOfDaysOfLatePay" />
+              <Mapping SourceColumn="Accumulated_Skipped_Days" DataSetColumn="Accumulated_Skipped_Days" />
+              <Mapping SourceColumn="Metal_Rate" DataSetColumn="Metal_Rate" />
+              <Mapping SourceColumn="GoldQuantity" DataSetColumn="GoldQuantity" />
+              <Mapping SourceColumn="Amount" DataSetColumn="Amount" />
+              <Mapping SourceColumn="TaxAmount" DataSetColumn="TaxAmount" />
+              <Mapping SourceColumn="AmtExclTax" DataSetColumn="AmtExclTax" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsGSSStatement" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsGSSStatement" msprop:Generator_UserDSName="dsGSSStatement">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtGSSStatement" msprop:Generator_TableClassName="dtGSSStatementDataTable" msprop:Generator_TableVarName="tabledtGSSStatement" msprop:Generator_RowChangedName="dtGSSStatementRowChanged" msprop:Generator_TablePropName="dtGSSStatement" msprop:Generator_RowDeletingName="dtGSSStatementRowDeleting" msprop:Generator_RowChangingName="dtGSSStatementRowChanging" msprop:Generator_RowEvHandlerName="dtGSSStatementRowChangeEventHandler" msprop:Generator_RowDeletedName="dtGSSStatementRowDeleted" msprop:Generator_RowClassName="dtGSSStatementRow" msprop:Generator_UserTableName="dtGSSStatement" msprop:Generator_RowEvArgName="dtGSSStatementRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MonthsofYear" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMonthsofYear" msprop:Generator_ColumnPropNameInRow="MonthsofYear" msprop:Generator_ColumnPropNameInTable="MonthsofYearColumn" msprop:Generator_UserColumnName="MonthsofYear" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PaymentMode" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPaymentMode" msprop:Generator_ColumnPropNameInRow="PaymentMode" msprop:Generator_ColumnPropNameInTable="PaymentModeColumn" msprop:Generator_UserColumnName="PaymentMode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Duedate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDuedate" msprop:Generator_ColumnPropNameInRow="Duedate" msprop:Generator_ColumnPropNameInTable="DuedateColumn" msprop:Generator_UserColumnName="Duedate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Transdate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTransdate" msprop:Generator_ColumnPropNameInRow="Transdate" msprop:Generator_ColumnPropNameInTable="TransdateColumn" msprop:Generator_UserColumnName="Transdate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransactionId" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTransactionId" msprop:Generator_ColumnPropNameInRow="TransactionId" msprop:Generator_ColumnPropNameInTable="TransactionIdColumn" msprop:Generator_UserColumnName="TransactionId" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OpeningDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnOpeningDate" msprop:Generator_ColumnPropNameInRow="OpeningDate" msprop:Generator_ColumnPropNameInTable="OpeningDateColumn" msprop:Generator_UserColumnName="OpeningDate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Maturity_Date" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMaturity_Date" msprop:Generator_ColumnPropNameInRow="Maturity_Date" msprop:Generator_ColumnPropNameInTable="Maturity_DateColumn" msprop:Generator_UserColumnName="Maturity_Date" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Days" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDays" msprop:Generator_ColumnPropNameInRow="Days" msprop:Generator_ColumnPropNameInTable="DaysColumn" msprop:Generator_UserColumnName="Days" type="xs:int" minOccurs="0" />
+              <xs:element name="NoOfDaysOfLatePay" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNoOfDaysOfLatePay" msprop:Generator_ColumnPropNameInRow="NoOfDaysOfLatePay" msprop:Generator_ColumnPropNameInTable="NoOfDaysOfLatePayColumn" msprop:Generator_UserColumnName="NoOfDaysOfLatePay" type="xs:int" minOccurs="0" />
+              <xs:element name="Accumulated_Skipped_Days" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAccumulated_Skipped_Days" msprop:Generator_ColumnPropNameInRow="Accumulated_Skipped_Days" msprop:Generator_ColumnPropNameInTable="Accumulated_Skipped_DaysColumn" msprop:Generator_UserColumnName="Accumulated_Skipped_Days" type="xs:int" minOccurs="0" />
+              <xs:element name="Metal_Rate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMetal_Rate" msprop:Generator_ColumnPropNameInRow="Metal_Rate" msprop:Generator_ColumnPropNameInTable="Metal_RateColumn" msprop:Generator_UserColumnName="Metal_Rate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GoldQuantity" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnGoldQuantity" msprop:Generator_ColumnPropNameInRow="GoldQuantity" msprop:Generator_ColumnPropNameInTable="GoldQuantityColumn" msprop:Generator_UserColumnName="GoldQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Amount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TaxAmount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTaxAmount" msprop:Generator_ColumnPropNameInRow="TaxAmount" msprop:Generator_ColumnPropNameInTable="TaxAmountColumn" msprop:Generator_UserColumnName="TaxAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AmtExclTax" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAmtExclTax" msprop:Generator_ColumnPropNameInRow="AmtExclTax" msprop:Generator_ColumnPropNameInTable="AmtExclTaxColumn" msprop:Generator_UserColumnName="AmtExclTax" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

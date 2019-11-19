@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsCounterWiseStockDtl" targetNamespace="http://tempuri.org/dsCounterWiseStockDtl.xsd" xmlns:mstns="http://tempuri.org/dsCounterWiseStockDtl.xsd" xmlns="http://tempuri.org/dsCounterWiseStockDtl.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="2" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="POSANDHERIConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="POSANDHERIConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Microsoft.Dynamics.Retail.Pos.BlankOperations.Properties.Settings.GlobalReference.Default.POSANDHERIConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="POSANDHERIConnectionString1" IsAppSettingsProperty="true" Modifier="Assembly" Name="POSANDHERIConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Microsoft.Dynamics.Retail.Pos.BlankOperations.Properties.Settings.GlobalReference.Default.POSANDHERIConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="POS4001ConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="POS4001ConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Microsoft.Dynamics.Retail.Pos.BlankOperations.Properties.Settings.GlobalReference.Default.POS4001ConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtCWStockDtlTableAdapter" GeneratorDataComponentClassName="dtCWStockDtlTableAdapter" Name="dtCWStockDtl" UserDataComponentName="dtCWStockDtlTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="POS4001ConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT A.TOCOUNTER AS [Counter],A.SkuNumber, 
+  CAST(ISNULL(A.QTY,0) AS NUMERIC (28,3)) AS Quantity,
+ F.NAME AS ITEMDESC,ISNULL(B.SETOF,0) AS SETOF,
+ CAST(ISNULL(SKP.NETQTY,0) AS NUMERIC (28,3)) NETQTY,
+ CAST(ISNULL(SKP.DMDQTY,0) AS NUMERIC (28,3)) DMDQTY, 
+ CAST(ISNULL(SKP.STNQTY,0) AS NUMERIC (28,3)) STNQTY
+  FROM SKUTableTrans A
+     INNER JOIN INVENTTABLE B ON A.SKUNUMBER = B.ITEMID 
+     LEFT OUTER JOIN ECORESPRODUCT E ON B.PRODUCT = E.RECID 
+     LEFT OUTER JOIN ECORESPRODUCTTRANSLATION F ON E.RECID = F.PRODUCT 
+	 LEFT JOIN SKUTable_Posted SKP ON A.SkuNumber=SKP.SkuNumber 
+  WHERE ISNULL(A.TOCOUNTER,'') &lt;&gt; ''   AND ISNULL(A.ISAVAILABLE,0) = 1 
+  ORDER BY A.TOCOUNTER, SkuNumber</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Counter" DataSetColumn="Counter" />
+              <Mapping SourceColumn="SkuNumber" DataSetColumn="SkuNumber" />
+              <Mapping SourceColumn="Quantity" DataSetColumn="Quantity" />
+              <Mapping SourceColumn="ITEMDESC" DataSetColumn="ITEMDESC" />
+              <Mapping SourceColumn="SETOF" DataSetColumn="SETOF" />
+              <Mapping SourceColumn="NETQTY" DataSetColumn="NETQTY" />
+              <Mapping SourceColumn="DMDQTY" DataSetColumn="DMDQTY" />
+              <Mapping SourceColumn="STNQTY" DataSetColumn="STNQTY" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtAWCSTableAdapter" GeneratorDataComponentClassName="dtAWCSTableAdapter" Name="dtAWCS" UserDataComponentName="dtAWCSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="POS4001ConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT  CAST(SUM(ISNULL(A.PDSCWQTY,0)) AS NUMERIC (28,0)) AS PCS,
+ CAST(SUM(ISNULL(A.QTY,0)) AS NUMERIC (28,3)) AS Quantity,
+ A.TOCOUNTER AS [Counter]
+ ,B.ARTICLE_CODE
+ ,ISNULL(C.[DESCRIPTION],'')AS [DESCRIPTION]--, SUM(ISNULL(B.SETOF,0)) AS SETOF
+
+ FROM SKUTableTrans A INNER JOIN INVENTTABLE B ON A.SKUNUMBER = B.ITEMID
+ LEFT OUTER JOIN Article_Master C ON B.ARTICLE_CODE = C.ARTICLE_CODE
+ WHERE ISNULL(TOCOUNTER,'') &lt;&gt; ''
+ AND ISNULL(ISAVAILABLE,0) = 1
+ GROUP BY B.ARTICLE_CODE,C.[DESCRIPTION],A.TOCOUNTER
+ ORDER BY  A.TOCOUNTER,B.ARTICLE_CODE</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Counter" DataSetColumn="Counter" />
+              <Mapping SourceColumn="Quantity" DataSetColumn="Quantity" />
+              <Mapping SourceColumn="PCS" DataSetColumn="PCS" />
+              <Mapping SourceColumn="ARTICLE_CODE" DataSetColumn="ARTICLE_CODE" />
+              <Mapping SourceColumn="DESCRIPTION" DataSetColumn="DESCRIPTION" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsCounterWiseStockDtl" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsCounterWiseStockDtl" msprop:Generator_UserDSName="dsCounterWiseStockDtl">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtCWStockDtl" msprop:Generator_TableClassName="dtCWStockDtlDataTable" msprop:Generator_TableVarName="tabledtCWStockDtl" msprop:Generator_RowChangedName="dtCWStockDtlRowChanged" msprop:Generator_TablePropName="dtCWStockDtl" msprop:Generator_RowDeletingName="dtCWStockDtlRowDeleting" msprop:Generator_RowChangingName="dtCWStockDtlRowChanging" msprop:Generator_RowEvHandlerName="dtCWStockDtlRowChangeEventHandler" msprop:Generator_RowDeletedName="dtCWStockDtlRowDeleted" msprop:Generator_RowClassName="dtCWStockDtlRow" msprop:Generator_UserTableName="dtCWStockDtl" msprop:Generator_RowEvArgName="dtCWStockDtlRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Counter" msprop:Generator_ColumnVarNameInTable="columnCounter" msprop:Generator_ColumnPropNameInRow="Counter" msprop:Generator_ColumnPropNameInTable="CounterColumn" msprop:Generator_UserColumnName="Counter" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SkuNumber" msprop:Generator_ColumnVarNameInTable="columnSkuNumber" msprop:Generator_ColumnPropNameInRow="SkuNumber" msprop:Generator_ColumnPropNameInTable="SkuNumberColumn" msprop:Generator_UserColumnName="SkuNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Quantity" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ITEMDESC" msprop:Generator_ColumnVarNameInTable="columnITEMDESC" msprop:Generator_ColumnPropNameInRow="ITEMDESC" msprop:Generator_ColumnPropNameInTable="ITEMDESCColumn" msprop:Generator_UserColumnName="ITEMDESC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SETOF" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSETOF" msprop:Generator_ColumnPropNameInRow="SETOF" msprop:Generator_ColumnPropNameInTable="SETOFColumn" msprop:Generator_UserColumnName="SETOF" type="xs:long" minOccurs="0" />
+              <xs:element name="NETQTY" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNETQTY" msprop:Generator_ColumnPropNameInRow="NETQTY" msprop:Generator_ColumnPropNameInTable="NETQTYColumn" msprop:Generator_UserColumnName="NETQTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DMDQTY" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDMDQTY" msprop:Generator_ColumnPropNameInRow="DMDQTY" msprop:Generator_ColumnPropNameInTable="DMDQTYColumn" msprop:Generator_UserColumnName="DMDQTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="STNQTY" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSTNQTY" msprop:Generator_ColumnPropNameInRow="STNQTY" msprop:Generator_ColumnPropNameInTable="STNQTYColumn" msprop:Generator_UserColumnName="STNQTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ArticleCode" msprop:Generator_ColumnVarNameInTable="columnArticleCode" msprop:Generator_ColumnPropNameInRow="ArticleCode" msprop:Generator_ColumnPropNameInTable="ArticleCodeColumn" msprop:Generator_UserColumnName="ArticleCode" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtAWCS" msprop:Generator_TableClassName="dtAWCSDataTable" msprop:Generator_TableVarName="tabledtAWCS" msprop:Generator_RowChangedName="dtAWCSRowChanged" msprop:Generator_TablePropName="dtAWCS" msprop:Generator_RowDeletingName="dtAWCSRowDeleting" msprop:Generator_RowChangingName="dtAWCSRowChanging" msprop:Generator_RowEvHandlerName="dtAWCSRowChangeEventHandler" msprop:Generator_RowDeletedName="dtAWCSRowDeleted" msprop:Generator_RowClassName="dtAWCSRow" msprop:Generator_UserTableName="dtAWCS" msprop:Generator_RowEvArgName="dtAWCSRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Counter" msprop:Generator_ColumnVarNameInTable="columnCounter" msprop:Generator_ColumnPropNameInRow="Counter" msprop:Generator_ColumnPropNameInTable="CounterColumn" msprop:Generator_UserColumnName="Counter" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Quantity" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PCS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPCS" msprop:Generator_ColumnPropNameInRow="PCS" msprop:Generator_ColumnPropNameInTable="PCSColumn" msprop:Generator_UserColumnName="PCS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ARTICLE_CODE" msprop:Generator_ColumnVarNameInTable="columnARTICLE_CODE" msprop:Generator_ColumnPropNameInRow="ARTICLE_CODE" msprop:Generator_ColumnPropNameInTable="ARTICLE_CODEColumn" msprop:Generator_UserColumnName="ARTICLE_CODE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCRIPTION" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDESCRIPTION" msprop:Generator_ColumnPropNameInRow="DESCRIPTION" msprop:Generator_ColumnPropNameInTable="DESCRIPTIONColumn" msprop:Generator_UserColumnName="DESCRIPTION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:dtCWStockDtl" />
+      <xs:field xpath="mstns:SkuNumber" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
