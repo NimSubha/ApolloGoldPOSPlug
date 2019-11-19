@@ -1,0 +1,1725 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{282963A8-B6CE-464E-8F9A-5B3A044F53E9}</ProjectGuid>
+    <SDKPath>..\..</SDKPath>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.Dynamics.Retail.Pos.BlankOperations</RootNamespace>
+    <AssemblyName>BlankOperations</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath />
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\..\Program Files %28x86%29\Microsoft Dynamics AX\60\Retail POS\Services\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>C:\Program Files\Microsoft Dynamics AX\60\Retail POS\Services\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BarcodeLib.Barcode.WinForms">
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\BarcodeLib.Barcode.WinForms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ButtonGrid, Version=6.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\ButtonGrid.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Customer">
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Customer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DecimalToText">
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\DecimalToText.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v11.2">
+      <HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\DevExpress.Data.v11.2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v11.2">
+      <HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\DevExpress.Utils.v11.2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.2">
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\DevExpress.XtraEditors.v11.2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v11.2">
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\DevExpress.XtraGrid.v11.2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Discount, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Discount.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Enums">
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Triggers\Enums.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Interaction, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Interaction.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="InteractionDefaults">
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\InteractionDefaults\Extension\InteractionDefaults.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Item, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Item.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Loyalty, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Loyalty.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Dynamics.Retail.Notification.Contracts">
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Microsoft.Dynamics.Retail.Notification.Contracts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.Retail.Pos.DataEntity">
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Microsoft.Dynamics.Retail.Pos.DataEntity.DLL</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.Retail.Pos.DataManager">
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Microsoft.Dynamics.Retail.Pos.DataManager.DLL</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.Retail.Pos.SystemCore">
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Microsoft.Dynamics.Retail.Pos.SystemCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Interactivity">
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Microsoft.Practices.Prism.Interactivity.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="POSControls">
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\POSControls.DLL</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Printing, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Printing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Rounding, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Rounding.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlankOperations.cs" />
+    <Compile Include="CurrencyInfo.cs" />
+    <Compile Include="CustomControls\ItemDetailsNavigationBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ItemDetailsNavigationBar.Designer.cs">
+      <DependentUpon>ItemDetailsNavigationBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ItemSaleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ItemSaleControl.Designer.cs">
+      <DependentUpon>ItemSaleControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\NIM_HomeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\NIM_HomeControl.designer.cs">
+      <DependentUpon>NIM_HomeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\OGPOperationsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\OGPOperationsControl.Designer.cs">
+      <DependentUpon>OGPOperationsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\OrderDetailsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\OrderDetailsPage.Designer.cs">
+      <DependentUpon>OrderDetailsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerAdvanceAdjustment.cs" />
+    <Compile Include="frmCustomerOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultiCurrency.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Report\clApprovalSales.cs" />
+    <Compile Include="Report\dsArticleWiseStockTaking.cs">
+      <DependentUpon>dsArticleWiseStockTaking.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\dsArticleWiseStockTaking.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsArticleWiseStockTaking.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsCashRegister.cs">
+      <DependentUpon>dsCashRegister.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsCashRegister.Designer.cs" />
+    <Compile Include="Report\dsCompLogo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCompLogo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DSCounterWiseStock.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSCounterWiseStock.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsCounterWiseStockDtl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCounterWiseStockDtl.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsCustOrdRepairOrdVoucher.cs">
+      <DependentUpon>dsCustOrdRepairOrdVoucher.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\dsCustOrdRepairOrdVoucher.designer.cs">
+      <DependentUpon>dsCustOrdRepairOrdVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsDashBoard.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsDashBoard.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsEstimation.Designer.cs" />
+    <Compile Include="Report\dsGoldStockSummary.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsGoldStockSummary.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsGssInstalmentReceipt.cs">
+      <DependentUpon>dsGssInstalmentReceipt.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\dsGssInstalmentReceipt.Designer.cs">
+      <DependentUpon>dsGssInstalmentReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsGSSStatement.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsGSSStatement.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsIncExpVou.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsIncExpVou.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsIncomeExpenseRegister.cs">
+      <DependentUpon>dsIncomeExpenseRegister.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\dsIncomeExpenseRegister.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsIncomeExpenseRegister.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsOGReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsOGReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsProductAdvanceReceipt.Designer.cs" />
+    <Compile Include="Report\dsRepairIssueRecInvoice.cs">
+      <DependentUpon>dsRepairIssueRecInvoice.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\dsRepairIssueRecInvoice.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRepairIssueRecInvoice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DSSaleInv.cs">
+      <DependentUpon>DSSaleInv.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DSSaleInv.Designer.cs" />
+    <Compile Include="Report\dsSalesAndSalesReturnData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSalesAndSalesReturnData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DSSalesInvoice.cs">
+      <DependentUpon>DSSalesInvoice.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\DSSalesInvoice.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSSalesInvoice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsSKUBooking.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSKUBooking.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsSKUCounterMovement.cs">
+      <DependentUpon>dsSKUCounterMovement.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\dsSKUCounterMovement.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSKUCounterMovement.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsStockVerification.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsStockVerification.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsTransDetails.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTransDetails.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsTransOrderCreate.cs">
+      <DependentUpon>dsTransOrderCreate.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\dsTransOrderCreate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTransOrderCreate.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmAWCSReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmAWCSReport.Designer.cs">
+      <DependentUpon>frmAWCSReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmCashRegisterrpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmCashRegisterrpt.designer.cs">
+      <DependentUpon>frmCashRegisterrpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmCashRegTAndCWise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmCashRegTAndCWise.Designer.cs">
+      <DependentUpon>frmCashRegTAndCWise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmCounterWiseStkDtlReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmCounterWiseStkDtlReport.Designer.cs">
+      <DependentUpon>frmCounterWiseStkDtlReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmCounterWiseStkReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmCounterWiseStkReport.designer.cs">
+      <DependentUpon>frmCounterWiseStkReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmDashBoard.Designer.cs">
+      <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmEstimationReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmEstimationReport.designer.cs">
+      <DependentUpon>frmEstimationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmGiftVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmGiftVoucher.Designer.cs">
+      <DependentUpon>frmGiftVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmGoldStockSummery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmGoldStockSummery.Designer.cs">
+      <DependentUpon>frmGoldStockSummery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmGSTSalesInv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmGSTSalesInv.designer.cs">
+      <DependentUpon>frmGSTSalesInv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\FrmIncomeExpenseRegisterRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\FrmIncomeExpenseRegisterRpt.Designer.cs">
+      <DependentUpon>FrmIncomeExpenseRegisterRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmIncomeExpVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmIncomeExpVoucher.designer.cs">
+      <DependentUpon>frmIncomeExpVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmMetalStockDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmMetalStockDetails.Designer.cs">
+      <DependentUpon>frmMetalStockDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmOfflineBillPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmOfflineBillPrint.Designer.cs">
+      <DependentUpon>frmOfflineBillPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmOGReportrpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmOGReportrpt.Designer.cs">
+      <DependentUpon>frmOGReportrpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmPDCReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmPDCReceipt.Designer.cs">
+      <DependentUpon>frmPDCReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmPrintGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmPrintGV.Designer.cs">
+      <DependentUpon>frmPrintGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmPrintInvoiceDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmPrintInvoiceDetail.Designer.cs">
+      <DependentUpon>frmPrintInvoiceDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmR_GSSAccStaement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmR_GSSAccStaement.Designer.cs">
+      <DependentUpon>frmR_GSSAccStaement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmR_GSSInstalmentReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmR_GSSInstalmentReceipt.Designer.cs">
+      <DependentUpon>frmR_GSSInstalmentReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmR_OldGoldPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmR_OldGoldPurchase.Designer.cs">
+      <DependentUpon>frmR_OldGoldPurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmR_ProductAdvanceReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmR_ProductAdvanceReceipt.designer.cs">
+      <DependentUpon>frmR_ProductAdvanceReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmR_SalesAndSalesReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmR_SalesAndSalesReturn.Designer.cs">
+      <DependentUpon>frmR_SalesAndSalesReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmR_SKUBookingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmR_SKUBookingReport.Designer.cs">
+      <DependentUpon>frmR_SKUBookingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmR_SKUCounterMovement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmR_SKUCounterMovement.Designer.cs">
+      <DependentUpon>frmR_SKUCounterMovement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmSaleInv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmSaleInv.designer.cs">
+      <DependentUpon>frmSaleInv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmStockVerificationInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmStockVerificationInput.Designer.cs">
+      <DependentUpon>frmStockVerificationInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmStockVerificationReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmStockVerificationReport.Designer.cs">
+      <DependentUpon>frmStockVerificationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmTransOrderCreateRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmTransOrderCreateRpt.Designer.cs">
+      <DependentUpon>frmTransOrderCreateRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TransData.cs">
+      <DependentUpon>TransData.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TransData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TransReportFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\TransReportFrm.Designer.cs">
+      <DependentUpon>TransReportFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToArabic.cs" />
+    <Compile Include="ToText.cs" />
+    <Compile Include="VersionHandler.cs" />
+    <Compile Include="ViewModels\Helper.cs" />
+    <Compile Include="ViewModels\OrderDetailsViewModel.cs" />
+    <Compile Include="ViewModels\PageViewModel.cs" />
+    <Compile Include="WinFormsTouch\frmArticleWiseStockCount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmArticleWiseStockCount.Designer.cs">
+      <DependentUpon>frmArticleWiseStockCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmBulkItemIssue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmBulkItemIssue.Designer.cs">
+      <DependentUpon>frmBulkItemIssue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmBulkItemShipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmBulkItemShipment.Designer.cs">
+      <DependentUpon>frmBulkItemShipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmBulkReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmBulkReceive.Designer.cs">
+      <DependentUpon>frmBulkReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmChangePassword.designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\FrmCustomerAdvBookQtyDays.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\FrmCustomerAdvBookQtyDays.Designer.cs">
+      <DependentUpon>FrmCustomerAdvBookQtyDays.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmCustomerBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmCustomerBalance.Designer.cs">
+      <DependentUpon>frmCustomerBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmCustomerOrderChequeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmCustomerOrderChequeInfo.Designer.cs">
+      <DependentUpon>frmCustomerOrderChequeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmDateFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmDateFilter.Designer.cs">
+      <DependentUpon>frmDateFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmDiscount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmDiscount.Designer.cs">
+      <DependentUpon>frmDiscount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmFetchCustomerFromHO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmFetchCustomerFromHO.Designer.cs">
+      <DependentUpon>frmFetchCustomerFromHO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmFetchItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmFetchItem.Designer.cs">
+      <DependentUpon>frmFetchItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmForeignDenomination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmForeignDenomination.Designer.cs">
+      <DependentUpon>frmForeignDenomination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmGetEstimateion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmGetEstimateion.designer.cs">
+      <DependentUpon>frmGetEstimateion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\FrmIncomeExpenseRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\FrmIncomeExpenseRegister.Designer.cs">
+      <DependentUpon>FrmIncomeExpenseRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmInputForGoldStockReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmInputForGoldStockReport.Designer.cs">
+      <DependentUpon>frmInputForGoldStockReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmInputGoldBookingQty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmInputGoldBookingQty.Designer.cs">
+      <DependentUpon>frmInputGoldBookingQty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmLanguageForInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmLanguageForInvoice.Designer.cs">
+      <DependentUpon>frmLanguageForInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmLoyaltyOTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmLoyaltyOTP.designer.cs">
+      <DependentUpon>frmLoyaltyOTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\FrmMakStnDiaDisc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\FrmMakStnDiaDisc.designer.cs">
+      <DependentUpon>FrmMakStnDiaDisc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmOfflineBillRecording.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmOfflineBillRecording.Designer.cs">
+      <DependentUpon>frmOfflineBillRecording.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmOfflineBillSettle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmOfflineBillSettle.Designer.cs">
+      <DependentUpon>frmOfflineBillSettle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmOrderAdvOrNot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmOrderAdvOrNot.Designer.cs">
+      <DependentUpon>frmOrderAdvOrNot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmCustOrderPaySchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmCustOrderPaySchedule.Designer.cs">
+      <DependentUpon>frmCustOrderPaySchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmPDCEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmPDCEntry.Designer.cs">
+      <DependentUpon>frmPDCEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmProductTypeInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmProductTypeInput.Designer.cs">
+      <DependentUpon>frmProductTypeInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmPurityReading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmPurityReading.designer.cs">
+      <DependentUpon>frmPurityReading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmRepairBatchId.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmRepairBatchId.Designer.cs">
+      <DependentUpon>frmRepairBatchId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmRepairInHouseTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmRepairInHouseTransfer.Designer.cs">
+      <DependentUpon>frmRepairInHouseTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmRepairIssueReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmRepairIssueReceive.Designer.cs">
+      <DependentUpon>frmRepairIssueReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmReportInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmReportInput.designer.cs">
+      <DependentUpon>frmReportInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmRetailStockCounting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmRetailStockCounting.Designer.cs">
+      <DependentUpon>frmRetailStockCounting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmRetailStockCounting1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmRetailStockCounting1.Designer.cs">
+      <DependentUpon>frmRetailStockCounting1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmSalesSplDiscInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmSalesSplDiscInfo.Designer.cs">
+      <DependentUpon>frmSalesSplDiscInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\CustomerDepositSKUDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\CustomerDepositSKUDetails.Designer.cs">
+      <DependentUpon>CustomerDepositSKUDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\CustomerOrderDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\CustomerOrderDetails.Designer.cs">
+      <DependentUpon>CustomerOrderDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\CustomerSubOrderDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\CustomerSubOrderDetails.Designer.cs">
+      <DependentUpon>CustomerSubOrderDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmAddLocalCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmAddLocalCustomer.Designer.cs">
+      <DependentUpon>frmAddLocalCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmCashRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmCashRegister.Designer.cs">
+      <DependentUpon>frmCashRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmCustomerFootfall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmCustomerFootfall.Designer.cs">
+      <DependentUpon>frmCustomerFootfall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmCustomFieldCalculations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmCustomFieldCalculations.Designer.cs">
+      <DependentUpon>frmCustomFieldCalculations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmCustOrderSample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmCustOrderSample.designer.cs">
+      <DependentUpon>frmCustOrderSample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmCustOrderSampleReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmCustOrderSampleReturn.designer.cs">
+      <DependentUpon>frmCustOrderSampleReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmCustOrderSampleStone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmCustOrderSampleStone.designer.cs">
+      <DependentUpon>frmCustOrderSampleStone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmDisplayMetalRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmDisplayMetalRate.designer.cs">
+      <DependentUpon>frmDisplayMetalRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmExtendedPurchExch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmExtendedPurchExch.designer.cs">
+      <DependentUpon>frmExtendedPurchExch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmFGReceived.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmFGReceived.designer.cs">
+      <DependentUpon>frmFGReceived.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmFGTransferred.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmFGTransferred.designer.cs">
+      <DependentUpon>frmFGTransferred.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmGeneralSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmGeneralSearch.Designer.cs">
+      <DependentUpon>frmGeneralSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmGSSAccStatment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmGSSAccStatment.Designer.cs">
+      <DependentUpon>frmGSSAccStatment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmGSSAcOpenning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmGSSAcOpenning.designer.cs">
+      <DependentUpon>frmGSSAcOpenning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmGSSInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmGSSInput.Designer.cs">
+      <DependentUpon>frmGSSInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmGSSMaturity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmGSSMaturity.Designer.cs">
+      <DependentUpon>frmGSSMaturity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmOGReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmOGReport.Designer.cs">
+      <DependentUpon>frmOGReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmOptionSelectionExchangeBuyback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmOptionSelectionExchangeBuyback.designer.cs">
+      <DependentUpon>frmOptionSelectionExchangeBuyback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmOptionSelectionGSSorCustomerOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmOptionSelectionGSSorCustomerOrder.Designer.cs">
+      <DependentUpon>frmOptionSelectionGSSorCustomerOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmOrderDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmOrderDetails.Designer.cs">
+      <DependentUpon>frmOrderDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmOrderSketch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmOrderSketch.designer.cs">
+      <DependentUpon>frmOrderSketch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmRepair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmRepairDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmRepairDetail.designer.cs">
+      <DependentUpon>frmRepairDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmRepairReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmRepairReturn.designer.cs">
+      <DependentUpon>frmRepairReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmRepairSubDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmRepairSubDetail.designer.cs">
+      <DependentUpon>frmRepairSubDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmSalesInfoCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmSalesInfoCode.Designer.cs">
+      <DependentUpon>frmSalesInfoCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmSearchOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmSETSKUScan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmSETSKUScan.Designer.cs">
+      <DependentUpon>frmSETSKUScan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmShowSafeDropBankDropOpAmtTenderDecInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmSKUDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmSKUDetails.Designer.cs">
+      <DependentUpon>frmSKUDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmSKURelease.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmStockTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmStockTransfer.designer.cs">
+      <DependentUpon>frmStockTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmStoneAdvance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmStoneAdvance.Designer.cs">
+      <DependentUpon>frmStoneAdvance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmSubOrderDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmSubOrderDetails.Designer.cs">
+      <DependentUpon>frmSubOrderDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmThirdPartyLoyaltyCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmThirdPartyLoyaltyCard.Designer.cs">
+      <DependentUpon>frmThirdPartyLoyaltyCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmTouchBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmTransferOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmTransferOrder.designer.cs">
+      <DependentUpon>frmTransferOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmTransferOrderPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmTransferOrderPrint.Designer.cs">
+      <DependentUpon>frmTransferOrderPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmTransferOrderReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmTransferOrderReceive.designer.cs">
+      <DependentUpon>frmTransferOrderReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmVertualRecalTaxValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmYESNO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmYESNO.Designer.cs">
+      <DependentUpon>frmYESNO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\RdlcViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\RdlcViewer.designer.cs">
+      <DependentUpon>RdlcViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\SKUUnlock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\SKUUnlock.Designer.cs">
+      <DependentUpon>SKUUnlock.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Dynamics.Retail.Pos.Contracts">
+      <HintPath>$(SDKPath)\Microsoft.Dynamics.Retail.Pos.Contracts.dll</HintPath>
+      <Private>False</Private>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="DataAccess">
+      <HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\DataAccess.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POSProcesses">
+      <HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\POSProcesses.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SystemSettings">
+      <HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\SystemSettings.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Tax, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Tax.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Transaction">
+      <HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\Transaction.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\dsArticleWiseStockTaking.xsc">
+      <DependentUpon>dsArticleWiseStockTaking.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsArticleWiseStockTaking.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsArticleWiseStockTaking.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\dsArticleWiseStockTaking.xss">
+      <DependentUpon>dsArticleWiseStockTaking.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsCashRegister.xsc">
+      <DependentUpon>dsCashRegister.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsCashRegister.xsd" />
+    <None Include="Report\dsCashRegister.xss">
+      <DependentUpon>dsCashRegister.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsCompLogo.xsc">
+      <DependentUpon>dsCompLogo.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsCompLogo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCompLogo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\dsCompLogo.xss">
+      <DependentUpon>dsCompLogo.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DSCounterWiseStock.xsc">
+      <DependentUpon>DSCounterWiseStock.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DSCounterWiseStock.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSCounterWiseStock.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Report\DSCounterWiseStock.xss">
+      <DependentUpon>DSCounterWiseStock.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsCounterWiseStockDtl.xsc">
+      <DependentUpon>dsCounterWiseStockDtl.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsCounterWiseStockDtl.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCounterWiseStockDtl.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\dsCounterWiseStockDtl.xss">
+      <DependentUpon>dsCounterWiseStockDtl.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsCustOrdRepairOrdVoucher.xsc">
+      <DependentUpon>dsCustOrdRepairOrdVoucher.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsCustOrdRepairOrdVoucher.xsd" />
+    <None Include="Report\dsCustOrdRepairOrdVoucher.xss">
+      <DependentUpon>dsCustOrdRepairOrdVoucher.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsDashBoard.xsc">
+      <DependentUpon>dsDashBoard.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsDashBoard.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDashBoard.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\dsDashBoard.xss">
+      <DependentUpon>dsDashBoard.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsEstimation.xsc">
+      <DependentUpon>dsEstimation.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsEstimation.xsd" />
+    <None Include="Report\dsEstimation.xss">
+      <DependentUpon>dsEstimation.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsGoldStockSummary.xsc">
+      <DependentUpon>dsGoldStockSummary.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsGoldStockSummary.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsGoldStockSummary.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\dsGoldStockSummary.xss">
+      <DependentUpon>dsGoldStockSummary.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsGssInstalmentReceipt.xsc">
+      <DependentUpon>dsGssInstalmentReceipt.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsGssInstalmentReceipt.xsd" />
+    <None Include="Report\dsGssInstalmentReceipt.xss">
+      <DependentUpon>dsGssInstalmentReceipt.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsGSSStatement.xsc">
+      <DependentUpon>dsGSSStatement.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsGSSStatement.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsGSSStatement.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\dsGSSStatement.xss">
+      <DependentUpon>dsGSSStatement.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsIncExpVou.xsc">
+      <DependentUpon>dsIncExpVou.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsIncExpVou.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsIncExpVou.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Report\dsIncExpVou.xss">
+      <DependentUpon>dsIncExpVou.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsIncomeExpenseRegister.xsc">
+      <DependentUpon>dsIncomeExpenseRegister.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsIncomeExpenseRegister.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsIncomeExpenseRegister.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\dsIncomeExpenseRegister.xss">
+      <DependentUpon>dsIncomeExpenseRegister.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsOGReport.xsc">
+      <DependentUpon>dsOGReport.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsOGReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsOGReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\dsOGReport.xss">
+      <DependentUpon>dsOGReport.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsProductAdvanceReceipt.xsc">
+      <DependentUpon>dsProductAdvanceReceipt.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsProductAdvanceReceipt.xsd" />
+    <None Include="Report\dsProductAdvanceReceipt.xss">
+      <DependentUpon>dsProductAdvanceReceipt.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsRepairIssueRecInvoice.xsc">
+      <DependentUpon>dsRepairIssueRecInvoice.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsRepairIssueRecInvoice.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRepairIssueRecInvoice.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\dsRepairIssueRecInvoice.xss">
+      <DependentUpon>dsRepairIssueRecInvoice.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DSSaleInv.xsc">
+      <DependentUpon>DSSaleInv.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DSSaleInv.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Report\DSSaleInv.xss">
+      <DependentUpon>DSSaleInv.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsSalesAndSalesReturnData.xsc">
+      <DependentUpon>dsSalesAndSalesReturnData.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsSalesAndSalesReturnData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSalesAndSalesReturnData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\dsSalesAndSalesReturnData.xss">
+      <DependentUpon>dsSalesAndSalesReturnData.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DSSalesInvoice.xsc">
+      <DependentUpon>DSSalesInvoice.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DSSalesInvoice.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSSalesInvoice.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DSSalesInvoice.xss">
+      <DependentUpon>DSSalesInvoice.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsSKUBooking.xsc">
+      <DependentUpon>dsSKUBooking.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsSKUBooking.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSKUBooking.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\dsSKUBooking.xss">
+      <DependentUpon>dsSKUBooking.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsSKUCounterMovement.xsc">
+      <DependentUpon>dsSKUCounterMovement.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsSKUCounterMovement.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSKUCounterMovement.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\dsSKUCounterMovement.xss">
+      <DependentUpon>dsSKUCounterMovement.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsStockVerification.xsc">
+      <DependentUpon>dsStockVerification.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsStockVerification.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsStockVerification.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\dsStockVerification.xss">
+      <DependentUpon>dsStockVerification.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsTransDetails.xsc">
+      <DependentUpon>dsTransDetails.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsTransDetails.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTransDetails.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\dsTransDetails.xss">
+      <DependentUpon>dsTransDetails.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsTransOrderCreate.xsc">
+      <DependentUpon>dsTransOrderCreate.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsTransOrderCreate.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTransOrderCreate.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\dsTransOrderCreate.xss">
+      <DependentUpon>dsTransOrderCreate.xsd</DependentUpon>
+    </None>
+    <None Include="Report\TransData.xsc">
+      <DependentUpon>TransData.xsd</DependentUpon>
+    </None>
+    <None Include="Report\TransData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TransData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\TransData.xss">
+      <DependentUpon>TransData.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CustomControls\ItemSaleControl.resx">
+      <DependentUpon>ItemSaleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\NIM_HomeControl.resx">
+      <DependentUpon>NIM_HomeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\OGPOperationsControl.resx">
+      <DependentUpon>OGPOperationsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomerOrder.resx">
+      <DependentUpon>frmCustomerOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CashRegisterrpt .rdlc" />
+    <EmbeddedResource Include="Report\CashRegisterTerminalAndCashierWise.rdlc" />
+    <EmbeddedResource Include="Report\FrmIncomeExpenseRegisterRpt.resx">
+      <DependentUpon>FrmIncomeExpenseRegisterRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\OfflineAdvanceDiscountVoucher.rdlc" />
+    <EmbeddedResource Include="Report\frmPDCReceipt.resx">
+      <DependentUpon>frmPDCReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\OrderOfflineAdvanceDiscountVoucher.rdlc" />
+    <EmbeddedResource Include="Report\OrderOfflineAdvanceReceipt.rdlc" />
+    <EmbeddedResource Include="Report\rptPDCReceipt.rdlc" />
+    <EmbeddedResource Include="Report\rptMOPWiseDetails.rdlc" />
+    <EmbeddedResource Include="Report\OfflineAdvanceReceipt.rdlc" />
+    <EmbeddedResource Include="Report\rptPNGEstimation.rdlc" />
+    <EmbeddedResource Include="Report\frmGiftVoucher.resx">
+      <DependentUpon>frmGiftVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmPrintGV.resx">
+      <DependentUpon>frmPrintGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptGVPrint.rdlc" />
+    <EmbeddedResource Include="Report\frmCashRegTAndCWise.resx">
+      <DependentUpon>frmCashRegTAndCWise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmGSTSalesInv.resx">
+      <DependentUpon>frmGSTSalesInv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmOfflineBillPrint.resx">
+      <DependentUpon>frmOfflineBillPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\GSTRptSaleInv.rdlc" />
+    <EmbeddedResource Include="Report\rptTenderDeclaration.rdlc" />
+    <EmbeddedResource Include="Report\rptGSSAccStatement.rdlc" />
+    <EmbeddedResource Include="Report\rptProductAdvanceReceipt.rdlc" />
+    <EmbeddedResource Include="Report\RptSaleInv.rdlc" />
+    <EmbeddedResource Include="Report\rptStockVerificationSummary.rdlc" />
+    <EmbeddedResource Include="Report\frmStockVerificationInput.resx">
+      <DependentUpon>frmStockVerificationInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptStockVerification.rdlc" />
+    <EmbeddedResource Include="Report\frmStockVerificationReport.resx">
+      <DependentUpon>frmStockVerificationReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptMOPWiseSummary.rdlc" />
+    <EmbeddedResource Include="Report\frmDashBoard.resx">
+      <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmIncomeExpVoucher.resx">
+      <DependentUpon>frmIncomeExpVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptIncExpVoucher.rdlc" />
+    <EmbeddedResource Include="Report\rptStockDetails.rdlc" />
+    <EmbeddedResource Include="Report\frmAWCSReport.resx">
+      <DependentUpon>frmAWCSReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmGoldStockSummery.resx">
+      <DependentUpon>frmGoldStockSummery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmMetalStockDetails.resx">
+      <DependentUpon>frmMetalStockDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptArticleWiseStockTaking.rdlc" />
+    <EmbeddedResource Include="Report\rptAWCSReport.rdlc" />
+    <EmbeddedResource Include="Report\rptGoldStockSummary.rdlc" />
+    <EmbeddedResource Include="Report\rptMalabarEstimation.rdlc" />
+    <EmbeddedResource Include="Report\rptRepairTransferOut.rdlc" />
+    <EmbeddedResource Include="Report\frmPrintInvoiceDetail.resx">
+      <DependentUpon>frmPrintInvoiceDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptAdvanceRefundReceipt.rdlc" />
+    <EmbeddedResource Include="Report\frmCashRegisterrpt.resx">
+      <DependentUpon>frmCashRegisterrpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmCounterWiseStkDtlReport.resx">
+      <DependentUpon>frmCounterWiseStkDtlReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmCounterWiseStkReport.resx">
+      <DependentUpon>frmCounterWiseStkReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmEstimationReport.resx">
+      <DependentUpon>frmEstimationReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmOGReportrpt.resx">
+      <DependentUpon>frmOGReportrpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmR_GSSAccStaement.resx">
+      <DependentUpon>frmR_GSSAccStaement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmR_GSSInstalmentReceipt.resx">
+      <DependentUpon>frmR_GSSInstalmentReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmR_OldGoldPurchase.resx">
+      <DependentUpon>frmR_OldGoldPurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmR_ProductAdvanceReceipt.resx">
+      <DependentUpon>frmR_ProductAdvanceReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmR_SalesAndSalesReturn.resx">
+      <DependentUpon>frmR_SalesAndSalesReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmR_SKUBookingReport.resx">
+      <DependentUpon>frmR_SKUBookingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmR_SKUCounterMovement.resx">
+      <DependentUpon>frmR_SKUCounterMovement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmSaleInv.resx">
+      <DependentUpon>frmSaleInv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmTransOrderCreateRpt.resx">
+      <DependentUpon>frmTransOrderCreateRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptCounterMovementReport.rdlc" />
+    <EmbeddedResource Include="Report\rptCounterWiseStock.rdlc" />
+    <EmbeddedResource Include="Report\rptCounterWiseStockDtl.rdlc" />
+    <EmbeddedResource Include="Report\rptCustOrdVoucher.rdlc" />
+    <EmbeddedResource Include="Report\rptEstimation.rdlc" />
+    <EmbeddedResource Include="Report\rptGSSInstalmentReceipt.rdlc" />
+    <EmbeddedResource Include="Report\rptInvoiceDetails.rdlc" />
+    <EmbeddedResource Include="Report\rptOGReport.rdlc" />
+    <EmbeddedResource Include="Report\rptRepairIssueRecVoucher.rdlc" />
+    <EmbeddedResource Include="Report\rptRepairOrdVoucher.rdlc" />
+    <EmbeddedResource Include="Report\rptSalesAndSalesReturn.rdlc" />
+    <EmbeddedResource Include="Report\rptSKUBooking.rdlc" />
+    <EmbeddedResource Include="Report\rptTransOrderCreate.rdlc" />
+    <EmbeddedResource Include="Report\rptTransOrderCreateDtl.rdlc" />
+    <EmbeddedResource Include="Report\Rpt_IncomeExpenseRegister.rdlc" />
+    <EmbeddedResource Include="Report\TransactionReport.rdlc" />
+    <EmbeddedResource Include="Report\TransReportFrm.resx">
+      <DependentUpon>TransReportFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmArticleWiseStockCount.resx">
+      <DependentUpon>frmArticleWiseStockCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmBulkItemIssue.resx">
+      <DependentUpon>frmBulkItemIssue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmBulkItemShipment.resx">
+      <DependentUpon>frmBulkItemShipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmBulkReceive.resx">
+      <DependentUpon>frmBulkReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\FrmCustomerAdvBookQtyDays.resx">
+      <DependentUpon>FrmCustomerAdvBookQtyDays.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmCustomerBalance.resx">
+      <DependentUpon>frmCustomerBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmCustomerOrderChequeInfo.resx">
+      <DependentUpon>frmCustomerOrderChequeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmDateFilter.resx">
+      <DependentUpon>frmDateFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmDiscount.resx">
+      <DependentUpon>frmDiscount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmFetchCustomerFromHO.resx">
+      <DependentUpon>frmFetchCustomerFromHO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmFetchItem.resx">
+      <DependentUpon>frmFetchItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmForeignDenomination.resx">
+      <DependentUpon>frmForeignDenomination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmGetEstimateion.resx">
+      <DependentUpon>frmGetEstimateion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\FrmIncomeExpenseRegister.resx">
+      <DependentUpon>FrmIncomeExpenseRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmInputForGoldStockReport.resx">
+      <DependentUpon>frmInputForGoldStockReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmInputGoldBookingQty.resx">
+      <DependentUpon>frmInputGoldBookingQty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmLanguageForInvoice.resx">
+      <DependentUpon>frmLanguageForInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmLoyaltyOTP.resx">
+      <DependentUpon>frmLoyaltyOTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\FrmMakStnDiaDisc.resx">
+      <DependentUpon>FrmMakStnDiaDisc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmOfflineBillRecording.resx">
+      <DependentUpon>frmOfflineBillRecording.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmOfflineBillSettle.resx">
+      <DependentUpon>frmOfflineBillSettle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmOrderAdvOrNot.resx">
+      <DependentUpon>frmOrderAdvOrNot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmCustOrderPaySchedule.resx">
+      <DependentUpon>frmCustOrderPaySchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmPDCEntry.resx">
+      <DependentUpon>frmPDCEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmProductTypeInput.resx">
+      <DependentUpon>frmProductTypeInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmPurityReading.resx">
+      <DependentUpon>frmPurityReading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmRepairBatchId.resx">
+      <DependentUpon>frmRepairBatchId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmRepairInHouseTransfer.resx">
+      <DependentUpon>frmRepairInHouseTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmRepairIssueReceive.resx">
+      <DependentUpon>frmRepairIssueReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmReportInput.resx">
+      <DependentUpon>frmReportInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmRetailStockCounting.resx">
+      <DependentUpon>frmRetailStockCounting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmRetailStockCounting1.resx">
+      <DependentUpon>frmRetailStockCounting1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmSalesSplDiscInfo.resx">
+      <DependentUpon>frmSalesSplDiscInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerDepositSKUDetails.resx">
+      <DependentUpon>CustomerDepositSKUDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerOrderDetails.resx">
+      <DependentUpon>CustomerOrderDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmAddLocalCustomer.resx">
+      <DependentUpon>frmAddLocalCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmCashRegister.resx">
+      <DependentUpon>frmCashRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmCustomerFootfall.resx">
+      <DependentUpon>frmCustomerFootfall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmCustomFieldCalculations.resx">
+      <DependentUpon>frmCustomFieldCalculations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmCustOrderSample.resx">
+      <DependentUpon>frmCustOrderSample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmCustOrderSampleReturn.resx">
+      <DependentUpon>frmCustOrderSampleReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmCustOrderSampleStone.resx">
+      <DependentUpon>frmCustOrderSampleStone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmDisplayMetalRate.resx">
+      <DependentUpon>frmDisplayMetalRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmExtendedPurchExch.resx">
+      <DependentUpon>frmExtendedPurchExch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmFGReceived.resx">
+      <DependentUpon>frmFGReceived.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmFGTransferred.resx">
+      <DependentUpon>frmFGTransferred.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmGeneralSearch.resx">
+      <DependentUpon>frmGeneralSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmGSSAccStatment.resx">
+      <DependentUpon>frmGSSAccStatment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmGSSAcOpenning.resx">
+      <DependentUpon>frmGSSAcOpenning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmGSSInput.resx">
+      <DependentUpon>frmGSSInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmGSSMaturity.resx">
+      <DependentUpon>frmGSSMaturity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmOGReport.resx">
+      <DependentUpon>frmOGReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmOptionSelectionExchangeBuyback.resx">
+      <DependentUpon>frmOptionSelectionExchangeBuyback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmOptionSelectionGSSorCustomerOrder.resx">
+      <DependentUpon>frmOptionSelectionGSSorCustomerOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmOrderDetails.resx">
+      <DependentUpon>frmOrderDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmOrderSketch.resx">
+      <DependentUpon>frmOrderSketch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmRepair.resx">
+      <DependentUpon>frmRepair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmRepairDetail.resx">
+      <DependentUpon>frmRepairDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmRepairReturn.resx">
+      <DependentUpon>frmRepairReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmRepairSubDetail.resx">
+      <DependentUpon>frmRepairSubDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmSalesInfoCode.resx">
+      <DependentUpon>frmSalesInfoCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmSearchOrder.resx">
+      <DependentUpon>frmSearchOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmSETSKUScan.resx">
+      <DependentUpon>frmSETSKUScan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmShowSafeDropBankDropOpAmtTenderDecInfo.resx">
+      <DependentUpon>frmShowSafeDropBankDropOpAmtTenderDecInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmSKUDetails.resx">
+      <DependentUpon>frmSKUDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmSKURelease.resx">
+      <DependentUpon>frmSKURelease.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmStockTransfer.resx">
+      <DependentUpon>frmStockTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmStoneAdvance.resx">
+      <DependentUpon>frmStoneAdvance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmSubOrderDetails.resx">
+      <DependentUpon>frmSubOrderDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmThirdPartyLoyaltyCard.resx">
+      <DependentUpon>frmThirdPartyLoyaltyCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmTransferOrder.resx">
+      <DependentUpon>frmTransferOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmTransferOrderPrint.resx">
+      <DependentUpon>frmTransferOrderPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmTransferOrderReceive.resx">
+      <DependentUpon>frmTransferOrderReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmVertualRecalTaxValue.resx">
+      <DependentUpon>frmVertualRecalTaxValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmYESNO.resx">
+      <DependentUpon>frmYESNO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RdlcViewer.resx">
+      <DependentUpon>RdlcViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SKUUnlock.resx">
+      <DependentUpon>SKUUnlock.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DownArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Magnify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PageDownArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PageUpArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PriceCalc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\logoRGJL.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Application\Application.csproj">
+      <Project>{0B0E1687-C9DA-4497-BF84-659BE90558E9}</Project>
+      <Name>Application</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Dialog\Dialog.csproj">
+      <Project>{19FDE46A-AF38-4295-8CB7-B7EE3F6D8D8A}</Project>
+      <Name>Dialog</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Dimension\Dimension.csproj">
+      <Project>{F61DB4C1-CF8C-4EB8-9F24-795F18768833}</Project>
+      <Name>Dimension</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
