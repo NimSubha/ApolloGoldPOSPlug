@@ -1,0 +1,7 @@
+C:\POS\POS Plug-ins\Services\Loyalty\bin\Debug\Loyalty.dll
+C:\POS\POS Plug-ins\Services\Loyalty\bin\Debug\Loyalty.pdb
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Loyalty.dll
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Loyalty.pdb
+C:\POS\POS Plug-ins\Services\Loyalty\obj\Debug\Loyalty.dll
+C:\POS\POS Plug-ins\Services\Loyalty\obj\Debug\Loyalty.pdb
+C:\POS\POS Plug-ins\Services\Loyalty\obj\Debug\Loyalty.csprojResolveAssemblyReference.cache
