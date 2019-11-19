@@ -1,0 +1,5 @@
+C:\POS\POS Plug-ins\Triggers\FiscalPrinterTriggers\bin\Debug\Microsoft.Dynamics.Retail.FiscalPrinterTriggers.dll
+C:\POS\POS Plug-ins\Triggers\FiscalPrinterTriggers\bin\Debug\Microsoft.Dynamics.Retail.FiscalPrinterTriggers.pdb
+C:\POS\POS Plug-ins\Triggers\FiscalPrinterTriggers\obj\Debug\Microsoft.Dynamics.Retail.FiscalPrinterTriggers.dll
+C:\POS\POS Plug-ins\Triggers\FiscalPrinterTriggers\obj\Debug\Microsoft.Dynamics.Retail.FiscalPrinterTriggers.pdb
+C:\POS\POS Plug-ins\Triggers\FiscalPrinterTriggers\obj\Debug\FiscalPrinterTriggers.csprojResolveAssemblyReference.cache

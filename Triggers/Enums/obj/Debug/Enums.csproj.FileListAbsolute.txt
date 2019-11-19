@@ -1,0 +1,43 @@
+D:\AX Retail POS 6.2\Triggers\Enums\bin\Debug\Enums.dll
+D:\AX Retail POS 6.2\Triggers\Enums\bin\Debug\Enums.pdb
+D:\AX Retail POS 6.2\Triggers\Enums\obj\Debug\ResolveAssemblyReference.cache
+D:\AX Retail POS 6.2\Triggers\Enums\obj\Debug\Enums.dll
+D:\AX Retail POS 6.2\Triggers\Enums\obj\Debug\Enums.pdb
+D:\Neeraj\AX Retail POS 6.2\Triggers\Enums\bin\Debug\Enums.dll
+D:\Neeraj\AX Retail POS 6.2\Triggers\Enums\bin\Debug\Enums.pdb
+D:\Neeraj\AX Retail POS 6.2\Triggers\Enums\obj\Debug\ResolveAssemblyReference.cache
+D:\Neeraj\AX Retail POS 6.2\Triggers\Enums\obj\Debug\Enums.dll
+D:\Neeraj\AX Retail POS 6.2\Triggers\Enums\obj\Debug\Enums.pdb
+E:\AX Retail POS 6.2 FINAL RELEASE - Copy\POS Plug-ins\Triggers\Enums\obj\Debug\ResolveAssemblyReference.cache
+E:\AX Retail POS 6.2 FINAL RELEASE - Copy\POS Plug-ins\Triggers\Enums\obj\Debug\Enums.dll
+E:\AX Retail POS 6.2 FINAL RELEASE - Copy\POS Plug-ins\Triggers\Enums\obj\Debug\Enums.pdb
+D:\Neeraj\AX Retail POS 6.2 FINAL RELEASE\POS Plug-ins\Triggers\Enums\obj\Debug\ResolveAssemblyReference.cache
+D:\Neeraj\AX Retail POS 6.2 FINAL RELEASE\POS Plug-ins\Triggers\Enums\obj\Debug\Enums.dll
+D:\Neeraj\AX Retail POS 6.2 FINAL RELEASE\POS Plug-ins\Triggers\Enums\obj\Debug\Enums.pdb
+D:\AX Retail POS 6.2 FINAL RELEASE\POS Plug-ins\Triggers\Enums\obj\Debug\ResolveAssemblyReference.cache
+D:\AX Retail POS 6.2 FINAL RELEASE\POS Plug-ins\Triggers\Enums\obj\Debug\Enums.dll
+D:\AX Retail POS 6.2 FINAL RELEASE\POS Plug-ins\Triggers\Enums\obj\Debug\Enums.pdb
+D:\POS\AX Retail POS 6.2\POS Plug-ins\Triggers\Enums\obj\Debug\Enums.dll
+D:\POS\AX Retail POS 6.2\POS Plug-ins\Triggers\Enums\obj\Debug\Enums.pdb
+D:\AX Retail POS_Reliance\POS Plug-ins\Triggers\Enums\obj\Debug\ResolveAssemblyReference.cache
+D:\AX Retail POS_Reliance\POS Plug-ins\Triggers\Enums\obj\Debug\Enums.dll
+D:\AX Retail POS_Reliance\POS Plug-ins\Triggers\Enums\obj\Debug\Enums.pdb
+C:\Program Files\Microsoft Dynamics AX\60\Retail POS\Triggers\Enums.dll
+C:\Program Files\Microsoft Dynamics AX\60\Retail POS\Triggers\Enums.pdb
+D:\POS\POS Plug-ins\Triggers\Enums\obj\Debug\Enums.dll
+D:\POS\POS Plug-ins\Triggers\Enums\obj\Debug\Enums.pdb
+D:\Retail MME\POS Plug-ins\Triggers\Enums\obj\Debug\Enums.dll
+D:\Retail MME\POS Plug-ins\Triggers\Enums\obj\Debug\Enums.pdb
+D:\Retail Samra\POS Plug-ins\Triggers\Enums\obj\Debug\Enums.dll
+D:\Retail Samra\POS Plug-ins\Triggers\Enums\obj\Debug\Enums.pdb
+C:\POS\POS Plug-ins\Triggers\Enums\obj\Debug\Enums.dll
+C:\POS\POS Plug-ins\Triggers\Enums\obj\Debug\Enums.pdb
+D:\Retail Malabar Dubai\POS Plug-ins\Triggers\Enums\obj\Debug\Enums.dll
+D:\Retail Malabar Dubai\POS Plug-ins\Triggers\Enums\obj\Debug\Enums.pdb
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Triggers\Enums.dll
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Triggers\Enums.pdb
+C:\Nimbus\POS Plug-ins\Triggers\Enums\obj\Debug\Enums.dll
+C:\Nimbus\POS Plug-ins\Triggers\Enums\obj\Debug\Enums.pdb
+C:\POS\MalabarExisting\POS Plug-ins\Triggers\Enums\obj\Debug\Enums.dll
+C:\POS\MalabarExisting\POS Plug-ins\Triggers\Enums\obj\Debug\Enums.pdb
+C:\POS\POS Plug-ins\Triggers\Enums\obj\Debug\Enums.csprojResolveAssemblyReference.cache
