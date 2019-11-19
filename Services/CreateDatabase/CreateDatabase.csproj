@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{408F48D0-41A4-4811-B041-E63AB35659DF}</ProjectGuid><SDKPath>..\..</SDKPath>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CreateDatabase</RootNamespace>
+    <AssemblyName>CreateDatabase</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' "><OutputPath>bin\Debug\</OutputPath></PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' "><OutputPath>bin\Release\</OutputPath></PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataAccess, Version=$(_bldVerMajorMinor).0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LSPOSNET\DataAccess\bin\$(Configuration)\DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework"><HintPath>$(ProgramFiles)\Microsoft Dynamics AX\6.2\Retail POS\EntityFramework.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="Microsoft.Dynamics.Retail.Pos.Contracts"><HintPath>$(SDKPath)\Microsoft.Dynamics.Retail.Pos.Contracts.dll</HintPath><Private>False</Private><EmbedInteropTypes>True</EmbedInteropTypes></Reference>
+    <Reference Include="Microsoft.Dynamics.Retail.Pos.DataEntity, Version=$(_bldVerMajorMinor).0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LSPOSNET\DataEntity\bin\$(Configuration)\Microsoft.Dynamics.Retail.Pos.DataEntity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.Retail.Pos.DataManager"><HintPath>$(ProgramFiles)\Microsoft Dynamics AX\6.2\Retail POS\Microsoft.Dynamics.Retail.Pos.DataManager.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="POSResources, Version=$(_bldVerMajorMinor).0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LSPOSNET\POSResources\bin\$(Configuration)\POSResources.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="SystemSettings, Version=$(_bldVerMajorMinor).0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LSPOSNET\SystemSettings\bin\$(Configuration)\SystemSettings.dll</HintPath>
+    </Reference>
+    <Reference Include="Transaction, Version=$(_bldVerMajorMinor).0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LSPOSNET\Transaction\bin\$(Configuration)\Transaction.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EmbeddedInstall.cs" />
+    <Compile Include="ImportInitialData.cs" />
+    <Compile Include="ProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgressForm.designer.cs">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUtility.cs" />
+    <Compile Include="Utilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DemoData\RETAILERRORS.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DemoData\POSISINFO.xml" />
+    <EmbeddedResource Include="ProgressForm.resx">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Upgrades\POSISUPGRADES.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseScript.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.0.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.1.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.2.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.3.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.4.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.5.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.6.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.7.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.8.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.9.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.10.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.11.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.12.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.13.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.14.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.15.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.16.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.17.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.18.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.19.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.20.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.21.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.22.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.23.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.24.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.25.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.26.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.27.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.28.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.29.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.30.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.31.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.32.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.33.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.34.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.35.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.36.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.37.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.38.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.39.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.40.0.sql" />
+    <EmbeddedResource Include="Upgrades\Upgrade6.2.41.0.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
