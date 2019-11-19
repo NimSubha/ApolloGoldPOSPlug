@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E47E65BF-BA49-4814-BDBB-3B9516E6B761}</ProjectGuid><SDKPath>..\..</SDKPath>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.Dynamics.Retail.FiscalPrinter.ShtrihPrinter</RootNamespace>
+    <AssemblyName>Microsoft.Dynamics.Retail.FiscalPrinter.ShtrihPrinter</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' "><OutputPath>bin\Debug\</OutputPath></PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' "><OutputPath>bin\Release\</OutputPath></PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.DrvFRLib">
+      <HintPath>.\Interop.DrvFRLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FieldManager.cs" />
+    <Compile Include="LineManager.cs" />
+    <Compile Include="LoyaltyManager.cs" />
+    <Compile Include="PrinterConfiguration.cs" />
+    
+    <Compile Include="PrinterConfigurationValidator.cs" />
+    <Compile Include="PrinterImage.cs" />
+    <Compile Include="PrinterTable.cs" />
+    <Compile Include="ShtrihConstants.cs" />
+    <Compile Include="ShtrihPrinter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Dynamics.Retail.Pos.Contracts"><HintPath>$(SDKPath)\Microsoft.Dynamics.Retail.Pos.Contracts.dll</HintPath><Private>False</Private><EmbedInteropTypes>True</EmbedInteropTypes></Reference>
+    <Reference Include="FiscalPrinterUtilities"><HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\Services\Microsoft.Dynamics.Retail.FiscalPrinter.FiscalPrinterUtilities.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="RussianFiscalPrinter"><HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\Services\Microsoft.Dynamics.Retail.FiscalPrinter.RussianFiscalPrinter.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="POSControls"><HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\POSControls.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="SystemCore"><HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\Microsoft.Dynamics.Retail.Pos.SystemCore.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="SystemSettings"><HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\SystemSettings.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="Transaction"><HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\Transaction.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="FiscalPrinterDriver"><HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\Services\Microsoft.Dynamics.Retail.FiscalPrinter.FiscalPrinterDriver.dll</HintPath><Private>False</Private></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Logo\logo.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
