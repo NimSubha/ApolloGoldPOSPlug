@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{76618A6F-CCC9-41A8-BA46-595674CBFD69}</ProjectGuid><SDKPath>..\..</SDKPath>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.Dynamics.Retail.FiscalPrinter.RussianFiscalPrinter</RootNamespace>
+    <AssemblyName>Microsoft.Dynamics.Retail.FiscalPrinter.RussianFiscalPrinter</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' "><OutputPath>bin\Debug\</OutputPath></PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' "><OutputPath>bin\Release\</OutputPath></PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.Practices.Prism.Interactivity"><HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\Microsoft.Practices.Prism.Interactivity.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Data.v11.2"><HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\DevExpress.Data.v11.2.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Utils.v11.2"><HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\DevExpress.Utils.v11.2.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.2"><HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\DevExpress.XtraEditors.v11.2.dll</HintPath><Private>False</Private></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Diagnostics"><HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\Microsoft.Dynamics.Retail.Diagnostics.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="Microsoft.Dynamics.Retail.Notification.Contracts"><HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\Microsoft.Dynamics.Retail.Notification.Contracts.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="Microsoft.Dynamics.Retail.Pos.Contracts"><HintPath>$(SDKPath)\Microsoft.Dynamics.Retail.Pos.Contracts.dll</HintPath><Private>False</Private><EmbedInteropTypes>True</EmbedInteropTypes></Reference>
+    <Reference Include="DataAccess"><HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\DataAccess.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="FiscalPrinterDriverFactory"><HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\Services\Microsoft.Dynamics.Retail.FiscalPrinter.FiscalPrinterDriverFactory.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="FiscalPrinterDriver"><HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\Services\Microsoft.Dynamics.Retail.FiscalPrinter.FiscalPrinterDriver.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="POSControls"><HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\POSControls.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="POSProcesses"><HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\POSProcesses.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="SystemCore"><HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\Microsoft.Dynamics.Retail.Pos.SystemCore.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="SystemSettings"><HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\SystemSettings.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="Transaction"><HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\Transaction.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="FiscalPrinterUtilities"><HintPath>$(ProgramFiles)\Microsoft Dynamics AX\60\Retail POS\Services\Microsoft.Dynamics.Retail.FiscalPrinter.FiscalPrinterUtilities.dll</HintPath><Private>False</Private></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FiscalMemoryData.cs" />
+    <Compile Include="GiftCardHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ITotalsHeaderDiscountLine.cs" />
+    <Compile Include="TotalsHeaderDiscountLine.cs" />
+    <Compile Include="DiscountHelper.cs" />
+    <Compile Include="RussianFiscalPrinter.cs" />
+    <Compile Include="RussianFiscalPrinter.Enumerations.cs" />
+    <Compile Include="RussianFiscalPrinter.IApplicationTriggers.cs" />
+    <Compile Include="RussianFiscalPrinter.IBlankOperations.cs" />
+    <Compile Include="RussianFiscalPrinter.ICashDrawer.cs" />
+    <Compile Include="RussianFiscalPrinter.ICustomerTriggers.cs" />
+    <Compile Include="RussianFiscalPrinter.IDiscount.cs" />
+    <Compile Include="RussianFiscalPrinter.IDiscountTriggers.cs" />
+    <Compile Include="RussianFiscalPrinter.IEFT.cs" />
+    <Compile Include="RussianFiscalPrinter.IEOD.cs" />
+    <Compile Include="RussianFiscalPrinter.IItemTriggers.cs" />
+    <Compile Include="RussianFiscalPrinter.IOperationTrigger.cs" />
+    <Compile Include="RussianFiscalPrinter.IPaymentTriggers.cs" />
+    <Compile Include="RussianFiscalPrinter.IPrinter.cs" />
+    <Compile Include="RussianFiscalPrinter.IPrinting.cs" />
+    <Compile Include="RussianFiscalPrinter.ITransactionTriggers.cs" />
+    <Compile Include="RussianFiscalPrinterDriver.cs" />
+    <Compile Include="RussianFiscalPrinterDriver.Helpers.cs" />
+    <Compile Include="RussianReports.cs" />
+    <Compile Include="RussianTaxRates.cs" />
+    <Compile Include="TransactionFiscalData.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+</Project>

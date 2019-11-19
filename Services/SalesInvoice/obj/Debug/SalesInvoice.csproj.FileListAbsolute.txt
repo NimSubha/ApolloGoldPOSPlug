@@ -1,0 +1,10 @@
+C:\POS\POS Plug-ins\Services\SalesInvoice\bin\Debug\SalesInvoice.dll
+C:\POS\POS Plug-ins\Services\SalesInvoice\bin\Debug\SalesInvoice.pdb
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\SalesInvoice.dll
+C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\SalesInvoice.pdb
+C:\POS\POS Plug-ins\Services\SalesInvoice\obj\Debug\Microsoft.Dynamics.Retail.Pos.SalesInvoice.WinFormsTouch.frmGetSalesInvoice.resources
+C:\POS\POS Plug-ins\Services\SalesInvoice\obj\Debug\SalesInvoice.csproj.GenerateResource.Cache
+C:\POS\POS Plug-ins\Services\SalesInvoice\obj\Debug\SalesInvoice.dll.licenses
+C:\POS\POS Plug-ins\Services\SalesInvoice\obj\Debug\SalesInvoice.dll
+C:\POS\POS Plug-ins\Services\SalesInvoice\obj\Debug\SalesInvoice.pdb
+C:\POS\POS Plug-ins\Services\SalesInvoice\obj\Debug\SalesInvoice.csprojResolveAssemblyReference.cache

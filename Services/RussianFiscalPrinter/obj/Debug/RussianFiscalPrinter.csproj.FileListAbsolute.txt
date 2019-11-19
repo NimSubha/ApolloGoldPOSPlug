@@ -1,0 +1,6 @@
+C:\POS\POS Plug-ins\Services\RussianFiscalPrinter\bin\Debug\Microsoft.Dynamics.Retail.FiscalPrinter.RussianFiscalPrinter.dll.config
+C:\POS\POS Plug-ins\Services\RussianFiscalPrinter\bin\Debug\Microsoft.Dynamics.Retail.FiscalPrinter.RussianFiscalPrinter.dll
+C:\POS\POS Plug-ins\Services\RussianFiscalPrinter\bin\Debug\Microsoft.Dynamics.Retail.FiscalPrinter.RussianFiscalPrinter.pdb
+C:\POS\POS Plug-ins\Services\RussianFiscalPrinter\obj\Debug\Microsoft.Dynamics.Retail.FiscalPrinter.RussianFiscalPrinter.dll
+C:\POS\POS Plug-ins\Services\RussianFiscalPrinter\obj\Debug\Microsoft.Dynamics.Retail.FiscalPrinter.RussianFiscalPrinter.pdb
+C:\POS\POS Plug-ins\Services\RussianFiscalPrinter\obj\Debug\RussianFiscalPrinter.csprojResolveAssemblyReference.cache
