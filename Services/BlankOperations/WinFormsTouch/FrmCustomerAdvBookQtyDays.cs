@@ -94,6 +94,8 @@ namespace Microsoft.Dynamics.Retail.Pos.BlankOperations.WinFormsTouch
             {
                 decimal dBookQty = 0m;
                 int iForDays = 0;
+                decimal chk = 0m;
+                chk = chk + 1;
 
                 if (!string.IsNullOrEmpty(TxtBookQty.Text))
                 {
