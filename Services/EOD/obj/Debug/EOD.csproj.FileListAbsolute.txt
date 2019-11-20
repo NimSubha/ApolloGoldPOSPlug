@@ -10,3 +10,4 @@ C:\POS\POS Plug-ins\Services\EOD\obj\Debug\EOD.csproj.GenerateResource.Cache
 C:\POS\POS Plug-ins\Services\EOD\obj\Debug\EOD.dll.licenses
 C:\POS\POS Plug-ins\Services\EOD\obj\Debug\EOD.dll
 C:\POS\POS Plug-ins\Services\EOD\obj\Debug\EOD.pdb
+C:\POS\POS Plug-ins\Services\EOD\obj\Debug\EOD.csprojResolveAssemblyReference.cache

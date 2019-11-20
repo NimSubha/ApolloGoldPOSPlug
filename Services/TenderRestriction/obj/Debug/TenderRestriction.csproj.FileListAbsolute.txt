@@ -6,3 +6,4 @@ C:\POS\POS Plug-ins\Services\TenderRestriction\obj\Debug\Microsoft.Dynamics.Reta
 C:\POS\POS Plug-ins\Services\TenderRestriction\obj\Debug\TenderRestriction.csproj.GenerateResource.Cache
 C:\POS\POS Plug-ins\Services\TenderRestriction\obj\Debug\TenderRestriction.dll
 C:\POS\POS Plug-ins\Services\TenderRestriction\obj\Debug\TenderRestriction.pdb
+C:\POS\POS Plug-ins\Services\TenderRestriction\obj\Debug\TenderRestriction.csprojResolveAssemblyReference.cache

@@ -7,3 +7,4 @@ C:\POS\POS Plug-ins\Services\Item\obj\Debug\Item.csproj.GenerateResource.Cache
 C:\POS\POS Plug-ins\Services\Item\obj\Debug\Item.dll.licenses
 C:\POS\POS Plug-ins\Services\Item\obj\Debug\Item.dll
 C:\POS\POS Plug-ins\Services\Item\obj\Debug\Item.pdb
+C:\POS\POS Plug-ins\Services\Item\obj\Debug\Item.csprojResolveAssemblyReference.cache

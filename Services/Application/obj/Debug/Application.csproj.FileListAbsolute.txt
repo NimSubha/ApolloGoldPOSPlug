@@ -4,3 +4,4 @@ C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Application.
 C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Services\Application.pdb
 C:\POS\POS Plug-ins\Services\Application\obj\Debug\Application.dll
 C:\POS\POS Plug-ins\Services\Application\obj\Debug\Application.pdb
+C:\POS\POS Plug-ins\Services\Application\obj\Debug\Application.csprojResolveAssemblyReference.cache

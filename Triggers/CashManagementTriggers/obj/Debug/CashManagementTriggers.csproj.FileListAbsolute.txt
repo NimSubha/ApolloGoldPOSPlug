@@ -4,3 +4,4 @@ C:\POS\POS Plug-ins\Triggers\CashManagementTriggers\obj\Debug\CashManagementTrig
 C:\POS\POS Plug-ins\Triggers\CashManagementTriggers\obj\Debug\CashManagementTriggers.pdb
 C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Triggers\CashManagementTriggers.dll
 C:\Program Files (x86)\Microsoft Dynamics AX\60\Retail POS\Triggers\CashManagementTriggers.pdb
+C:\POS\POS Plug-ins\Triggers\CashManagementTriggers\obj\Debug\CashManagementTriggers.csprojResolveAssemblyReference.cache

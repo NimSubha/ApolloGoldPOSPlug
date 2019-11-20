@@ -6,3 +6,4 @@ C:\POS\POS Plug-ins\Services\Card\obj\Debug\Microsoft.Dynamics.Retail.Pos.Card.f
 C:\POS\POS Plug-ins\Services\Card\obj\Debug\Card.csproj.GenerateResource.Cache
 C:\POS\POS Plug-ins\Services\Card\obj\Debug\Card.dll
 C:\POS\POS Plug-ins\Services\Card\obj\Debug\Card.pdb
+C:\POS\POS Plug-ins\Services\Card\obj\Debug\Card.csprojResolveAssemblyReference.cache

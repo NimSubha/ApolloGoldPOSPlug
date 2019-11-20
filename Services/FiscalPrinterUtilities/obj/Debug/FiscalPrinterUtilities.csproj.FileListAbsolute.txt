@@ -2,3 +2,4 @@ C:\POS\POS Plug-ins\Services\FiscalPrinterUtilities\bin\Debug\Microsoft.Dynamics
 C:\POS\POS Plug-ins\Services\FiscalPrinterUtilities\bin\Debug\Microsoft.Dynamics.Retail.FiscalPrinter.FiscalPrinterUtilities.pdb
 C:\POS\POS Plug-ins\Services\FiscalPrinterUtilities\obj\Debug\Microsoft.Dynamics.Retail.FiscalPrinter.FiscalPrinterUtilities.dll
 C:\POS\POS Plug-ins\Services\FiscalPrinterUtilities\obj\Debug\Microsoft.Dynamics.Retail.FiscalPrinter.FiscalPrinterUtilities.pdb
+C:\POS\POS Plug-ins\Services\FiscalPrinterUtilities\obj\Debug\FiscalPrinterUtilities.csprojResolveAssemblyReference.cache

@@ -8,3 +8,4 @@ C:\POS\POS Plug-ins\Services\CorporateCard\obj\Debug\CorporateCard.csproj.Genera
 C:\POS\POS Plug-ins\Services\CorporateCard\obj\Debug\CorporateCard.dll.licenses
 C:\POS\POS Plug-ins\Services\CorporateCard\obj\Debug\CorporateCard.dll
 C:\POS\POS Plug-ins\Services\CorporateCard\obj\Debug\CorporateCard.pdb
+C:\POS\POS Plug-ins\Services\CorporateCard\obj\Debug\CorporateCard.csprojResolveAssemblyReference.cache

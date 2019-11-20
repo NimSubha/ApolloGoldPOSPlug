@@ -10,3 +10,4 @@ C:\POS\POS Plug-ins\Services\Infocodes\obj\Debug\Infocodes.csproj.GenerateResour
 C:\POS\POS Plug-ins\Services\Infocodes\obj\Debug\InfoCodes.dll.licenses
 C:\POS\POS Plug-ins\Services\Infocodes\obj\Debug\InfoCodes.dll
 C:\POS\POS Plug-ins\Services\Infocodes\obj\Debug\InfoCodes.pdb
+C:\POS\POS Plug-ins\Services\Infocodes\obj\Debug\Infocodes.csprojResolveAssemblyReference.cache

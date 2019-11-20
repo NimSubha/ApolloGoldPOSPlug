@@ -35,6 +35,8 @@ namespace Microsoft.Dynamics.Retail.Pos.BlankOperations.WinFormsTouch
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+            int a=0;
+            a = a + 1;
         }
 
         private void txtCustomerName_KeyPress(object sender, KeyPressEventArgs e)

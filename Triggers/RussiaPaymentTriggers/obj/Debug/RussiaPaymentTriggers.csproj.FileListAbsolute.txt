@@ -2,3 +2,4 @@ C:\POS\POS Plug-ins\Triggers\RussiaPaymentTriggers\bin\Debug\RussiaPaymentTrigge
 C:\POS\POS Plug-ins\Triggers\RussiaPaymentTriggers\bin\Debug\RussiaPaymentTriggers.pdb
 C:\POS\POS Plug-ins\Triggers\RussiaPaymentTriggers\obj\Debug\RussiaPaymentTriggers.dll
 C:\POS\POS Plug-ins\Triggers\RussiaPaymentTriggers\obj\Debug\RussiaPaymentTriggers.pdb
+C:\POS\POS Plug-ins\Triggers\RussiaPaymentTriggers\obj\Debug\RussiaPaymentTriggers.csprojResolveAssemblyReference.cache

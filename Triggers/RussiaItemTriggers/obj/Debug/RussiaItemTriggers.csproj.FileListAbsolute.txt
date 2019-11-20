@@ -2,3 +2,4 @@ C:\POS\POS Plug-ins\Triggers\RussiaItemTriggers\bin\Debug\RussiaItemTriggers.dll
 C:\POS\POS Plug-ins\Triggers\RussiaItemTriggers\bin\Debug\RussiaItemTriggers.pdb
 C:\POS\POS Plug-ins\Triggers\RussiaItemTriggers\obj\Debug\RussiaItemTriggers.dll
 C:\POS\POS Plug-ins\Triggers\RussiaItemTriggers\obj\Debug\RussiaItemTriggers.pdb
+C:\POS\POS Plug-ins\Triggers\RussiaItemTriggers\obj\Debug\RussiaItemTriggers.csprojResolveAssemblyReference.cache

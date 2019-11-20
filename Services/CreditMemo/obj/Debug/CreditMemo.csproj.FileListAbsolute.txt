@@ -8,3 +8,4 @@ C:\POS\POS Plug-ins\Services\CreditMemo\obj\Debug\CreditMemo.csproj.GenerateReso
 C:\POS\POS Plug-ins\Services\CreditMemo\obj\Debug\CreditMemo.dll.licenses
 C:\POS\POS Plug-ins\Services\CreditMemo\obj\Debug\CreditMemo.dll
 C:\POS\POS Plug-ins\Services\CreditMemo\obj\Debug\CreditMemo.pdb
+C:\POS\POS Plug-ins\Services\CreditMemo\obj\Debug\CreditMemo.csprojResolveAssemblyReference.cache
