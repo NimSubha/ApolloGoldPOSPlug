@@ -30,6 +30,8 @@ namespace Microsoft.Dynamics.Retail.Pos.BlankOperations.WinFormsTouch
             SqlTransaction transaction = null;
             int iCustFootFall = 0;
             string commandText = string.Empty;
+            int Chk=0;
+            Chk = Chk + 1;
 
             if (isValid())
             {
