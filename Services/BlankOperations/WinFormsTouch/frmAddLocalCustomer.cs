@@ -35,10 +35,6 @@ namespace Microsoft.Dynamics.Retail.Pos.BlankOperations.WinFormsTouch
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
-            int a=0;
-            a = a + 1;
-            int ab = 0;
-            ab = ab + 1;
         }
 
         private void txtCustomerName_KeyPress(object sender, KeyPressEventArgs e)
@@ -47,8 +43,6 @@ namespace Microsoft.Dynamics.Retail.Pos.BlankOperations.WinFormsTouch
             if ((!char.IsControl(e.KeyChar)) && (!Regex.IsMatch(Convert.ToString(e.KeyChar), @"^[a-zA-Z ]*$")))
             {
                 e.Handled = true;
-                int SS = 0;
-                SS = SS + 1;
             }
         }
 
