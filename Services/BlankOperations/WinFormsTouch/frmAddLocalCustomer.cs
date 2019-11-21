@@ -47,6 +47,8 @@ namespace Microsoft.Dynamics.Retail.Pos.BlankOperations.WinFormsTouch
             if ((!char.IsControl(e.KeyChar)) && (!Regex.IsMatch(Convert.ToString(e.KeyChar), @"^[a-zA-Z ]*$")))
             {
                 e.Handled = true;
+                int SS = 0;
+                SS = SS + 1;
             }
         }
 
