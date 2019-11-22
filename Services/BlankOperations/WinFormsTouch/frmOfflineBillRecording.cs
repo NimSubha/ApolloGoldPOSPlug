@@ -281,6 +281,7 @@ namespace Microsoft.Dynamics.Retail.Pos.BlankOperations.WinFormsTouch
             string sUniqueNo = string.Empty;
             if (isValiedItem())
             {
+                //====================================== Subho check =============================
                 calculateAmount();
                 calTaxAmount();
                 DataRow dr;

@@ -11850,6 +11850,7 @@ namespace BlankOperations.WinFormsTouch
                     conn.Open();
                 StringBuilder sbQuery = new StringBuilder();
 
+                //=======================================Subha==========================================
                 sbQuery.Append("select distinct ORDERNUMBER,LineNum FROM RETAILCUSTOMERDEPOSITSKUDETAILS WHERE SKUNUMBER='" + sSKU + "' AND CUSTOMERID='" + sCustId + "' AND DELIVERED=0 AND RELEASED = 0 and ORDERNUMBER='" + sOrderNo + "'");
                 sbQuery.Append("Union select CUSTORDERNUM ORDERNUMBER, CUSTORDERLINENUM  LineNum from SKUTable_Posted where SKUNUMBER='" + sSKU + "' and CUSTORDERNUM='" + sOrderNo + "'");
 
