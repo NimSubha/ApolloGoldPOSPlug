@@ -2226,6 +2226,7 @@ namespace Microsoft.Dynamics.Retail.Pos.TransactionTriggers
                 retailTrans.PartnerData.CustAdvCommitedQty = 0;
                 retailTrans.PartnerData.CustCommitedForDays = 0;
                 retailTrans.PartnerData.AutoGenCommitedQty = 0;
+                //retailTrans.PartnerData.AutoGenCommitedQty = 0; 221119
                 //============================================================
 
                 retailTrans.PartnerData.GMAAdjustment = false;
